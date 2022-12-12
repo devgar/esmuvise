@@ -20,8 +20,10 @@ async function start() {
   // Build only in dev mode
   if (config.dev) {
     const builder = new Builder(nuxt)
-    await builder.build()
+    builder.build()
   }
+
+  app.use('/api', require('./api'))
 
   // Give nuxt middleware to express
   app.use(nuxt.render)
