@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Rubrica.belongsTo(models.Asignatura)
+      Rubrica.belongsTo(models.RubricaGroup)
+      Rubrica.hasMany(models.EvaluationItem)
     }
   }
   Rubrica.init(
@@ -38,7 +39,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Rubrica',
-      indexes: [{ unique: true, fields: ['concept', 'AsignaturaId'] }]
+      indexes: [{ unique: true, fields: ['concept', 'RubricaGroupId'] }]
     }
   )
   return Rubrica

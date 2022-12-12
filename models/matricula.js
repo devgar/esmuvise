@@ -1,5 +1,7 @@
 'use strict'
 const { Model } = require('sequelize')
+const unique = require('./helpers/unique')
+
 module.exports = (sequelize, DataTypes) => {
   class Matricula extends Model {
     /**
@@ -9,17 +11,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Matricula.belongsTo(models.Alumno)
+      Matricula.belongsTo(models.Asignatura)
     }
   }
   Matricula.init(
     {
       curso: {
-        type: DataTypes.INTEGER.UNSIGNED
+        type: DataTypes.INTEGER
       }
     },
     {
       sequelize,
-      modelName: 'Matricula'
+      modelName: 'Matricula',
+      indexes: [unique(['curso', 'AlumnoId', 'AsignaturaId'])]
     }
   )
   return Matricula

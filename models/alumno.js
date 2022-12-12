@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      Alumno.belongsToMany(models.Asignatura, { through: models.Matricula })
+      Alumno.hasMany(models.Matricula)
     }
   }
   Alumno.init(

@@ -1,5 +1,7 @@
 'use strict'
 const { Model } = require('sequelize')
+const unique = require('./helpers/unique')
+
 module.exports = (sequelize, DataTypes) => {
   class EvaluationItem extends Model {
     /**
@@ -10,7 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       EvaluationItem.belongsTo(models.Alumno)
+      EvaluationItem.belongsTo(models.Asignatura)
       EvaluationItem.belongsTo(models.Matricula)
+      EvaluationItem.belongsTo(models.Rubrica)
     }
   }
   EvaluationItem.init(
@@ -18,11 +22,16 @@ module.exports = (sequelize, DataTypes) => {
       value: {
         type: DataTypes.INTEGER,
         allowNull: false
+      },
+      body: {
+        type: DataTypes.TEXT,
+        allownNull: false
       }
     },
     {
       sequelize,
-      modelName: 'EvaluationItem'
+      modelName: 'EvaluationItem',
+      indexes: [unique(['RubricaId', 'AlumnoId', 'AsignaturaId'])]
     }
   )
   return EvaluationItem
