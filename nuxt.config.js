@@ -1,6 +1,9 @@
 const colors = require('vuetify/es5/util/colors').default
 
 module.exports = {
+  server: {
+    host: '0.0.0.0'
+  },
   ssr: false,
   telemetry: false,
   /*
