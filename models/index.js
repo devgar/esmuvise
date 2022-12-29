@@ -38,4 +38,22 @@ Object.keys(db).forEach((modelName) => {
 db.sequelize = sequelize
 db.Sequelize = Sequelize
 
+db.IsEmpty = async () => {
+  return !(await db.Alumno.findOne())
+}
+
+db.Initialize = async () => {
+  try {
+    const alumnos = require('../alumnos.json')
+    const asignaturas = require('../asignaturas.json')
+    const matriculas = require('../matriculas.json')
+    await db.Alumno.bulkCreate(alumnos)
+    await db.Asignatura.bulkCreate(asignaturas)
+    await db.Matricula.bulkCreate(matriculas)
+  } catch (e) {
+    // eslint-disable-next-line no-console
+    console.warn('Imposible to initialize due to:', e)
+  }
+}
+
 module.exports = db

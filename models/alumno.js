@@ -10,6 +10,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Alumno.hasMany(models.Matricula)
+      Alumno.hasMany(models.EvaluationItem)
     }
   }
   Alumno.init(
@@ -18,7 +19,18 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING,
         allowNull: false
       },
-      lastName: DataTypes.STRING
+      lastName: {
+        type: DataTypes.STRING,
+        allowNull: false
+      },
+      dni: DataTypes.STRING,
+      codVia: DataTypes.STRING,
+      domicilio: DataTypes.STRING,
+      codPostal: DataTypes.STRING,
+      localidad: DataTypes.STRING,
+      telephone: DataTypes.STRING,
+      birthDate: DataTypes.DATEONLY,
+      sex: DataTypes.STRING
     },
     {
       sequelize,

@@ -1,7 +1,7 @@
 <template>
   <v-data-table
     :headers="headers"
-    :items="alumnos"
+    :items="asignaturas"
     sort-by="calories"
     class="elevation-1"
   >
@@ -95,37 +95,28 @@ export default {
       {
         text: 'Nombre',
         align: 'start',
-        value: 'firstName'
+        value: 'nameVLC'
       },
       {
-        text: 'Apellido',
-        align: 'start',
-        value: 'lastName'
-      },
-      {
-        text: 'DNI',
-        value: 'dni'
-      },
-      {
-        text: 'Teléfono',
-        value: 'telephone'
+        text: 'Troncal',
+        value: 'troncal'
       },
       { text: 'Acciones', value: 'actions', sortable: false }
     ],
     editedIndex: -1,
     editedItem: {
-      firstName: '',
-      lastName: ''
+      firstName: 'Edgar',
+      lastName: 'Albalate'
     },
     defaultItem: {
-      firstName: '',
-      lastName: ''
+      firstName: 'Edgar',
+      lastName: 'Albalate'
     }
   }),
 
   computed: {
-    alumnos() {
-      return this.$store.state.alumnos.alumnos
+    asignaturas() {
+      return this.$store.state.asignaturas.asignaturas
     },
     formTitle() {
       return this.editedIndex === -1 ? 'Nuev@ Alumn@' : 'Editar'
@@ -142,7 +133,7 @@ export default {
   },
 
   created() {
-    this.$store.dispatch('alumnos/alumnosFETCH')
+    this.$store.dispatch('asignaturas/asignaturasFETCH')
   },
 
   methods: {
@@ -183,7 +174,7 @@ export default {
       if (this.editedIndex > -1) {
         // Object.assign(this.desserts[this.editedIndex], this.editedItem)
       } else {
-        this.$store.dispatch('alumnosPOST', this.editedItem)
+        this.$store.dispatch('asignaturasPOST', this.editedItem)
         // this.desserts.push(this.editedItem)
       }
       this.close()

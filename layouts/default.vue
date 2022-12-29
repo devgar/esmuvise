@@ -10,7 +10,7 @@
 
       <template v-slot:extension>
         <v-btn small plain nuxt to="/alumnos">Alumnos</v-btn>
-        <v-btn small plain>Asignaturas</v-btn>
+        <v-btn small plain next to="/asignaturas">Asignaturas</v-btn>
         <v-btn small plain next to="/matriculas">Matriculas</v-btn>
         <v-btn small plain>Rubricas</v-btn>
         <v-divider vertical />

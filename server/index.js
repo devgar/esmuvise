@@ -3,7 +3,7 @@ const consola = require('consola')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
 
-const { sequelize } = require('../models')
+const db = require('../models')
 
 // Import and Set Nuxt.js options
 const config = require('../nuxt.config.js')
@@ -15,7 +15,10 @@ async function start() {
 
   const { host, port } = nuxt.options.server
 
-  await sequelize.sync()
+  await db.sequelize.sync()
+  if (await db.IsEmpty()) {
+    await db.Initialize()
+  }
   await nuxt.ready()
   // Build only in dev mode
   if (config.dev) {

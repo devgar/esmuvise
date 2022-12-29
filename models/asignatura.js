@@ -15,9 +15,12 @@ module.exports = (sequelize, DataTypes) => {
   }
   Asignatura.init(
     {
-      name: {
+      nameVLC: {
         type: DataTypes.STRING,
         allowNull: false
+      },
+      nameCAS: {
+        type: DataTypes.STRING
       },
       troncal: {
         type: DataTypes.BOOLEAN,

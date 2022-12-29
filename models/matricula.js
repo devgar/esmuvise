@@ -17,6 +17,9 @@ module.exports = (sequelize, DataTypes) => {
   }
   Matricula.init(
     {
+      ano: {
+        type: DataTypes.INTEGER
+      },
       curso: {
         type: DataTypes.INTEGER
       }
