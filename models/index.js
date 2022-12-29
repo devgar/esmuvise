@@ -44,9 +44,9 @@ db.IsEmpty = async () => {
 
 db.Initialize = async () => {
   try {
-    const alumnos = require('../alumnos.json')
-    const asignaturas = require('../asignaturas.json')
-    const matriculas = require('../matriculas.json')
+    const alumnos = require('../seed/alumnos.json')
+    const asignaturas = require('../seed/asignaturas.json')
+    const matriculas = require('../seed/matriculas.json')
     await db.Alumno.bulkCreate(alumnos)
     await db.Asignatura.bulkCreate(asignaturas)
     await db.Matricula.bulkCreate(matriculas)
