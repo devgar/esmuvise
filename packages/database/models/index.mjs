@@ -43,22 +43,23 @@ db.IsEmpty = async () => {
   return !(await db.Alumno.findOne())
 }
 
-db.Initialize = () => {
-  return Promise.all([
-    import('../seed/alumnos.json'),
-    import('../seed/asignaturas.json'),
-    import('../seed/matriculas.json'),
-  ]).then(([alumnos, asignaturas, matriculas]) => {
-    return Promise.all([
+db.Initialize = async () => {
+  try {
+    const [alumnos, asignaturas, matriculas] = await Promise.all([
+      import('../seed/alumnos.json'),
+      import('../seed/asignaturas.json'),
+      import('../seed/matriculas.json'),
+    ]) 
+    await Promise.all([
       db.Alumno.bulkCreate(alumnos),
       db.Asignatura.bulkCreate(asignaturas),
       db.Matricula.bulkCreate(matriculas)
     ])
-  }).catch(err  => {
+  } catch(err){
     console.warn('Imposible to initialize due to:', err)
-    })
+  }
 }
 
-// await sequelize.sync()
-
 export default db
+export const Alumno = db.Alumno
+export const Asignatura = db.Asignatura

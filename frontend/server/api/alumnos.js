@@ -1,5 +1,5 @@
-import db from '../../database/models/index.mjs'
+import { Alumno } from 'database'
 
 export default defineEventHandler((_event) => {
-    return db.Alumno.findAll()
+    return Alumno.findAll()
 })

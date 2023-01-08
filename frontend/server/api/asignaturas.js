@@ -1,5 +1,5 @@
-import db from '../../database/models/index.mjs'
+import { Asignatura } from 'database'
 
 export default defineEventHandler((_event) => {
-    return db.Asignatura.findAll()
+    return Asignatura.findAll()
 })

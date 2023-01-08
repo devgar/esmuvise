@@ -1,5 +1,5 @@
 import { defineNitroPlugin } from '#imports'
-import db from '../../database/models/index.mjs'
+import db from 'database'
 
 export default defineNitroPlugin(async _nitroApp => {
     await db.sequelize.sync()
