@@ -14,7 +14,7 @@ export const useNavStore = defineStore('nav', {
             this.other = this.other.filter(link => link.to !== to) 
         },
         pop() {
-            this.remove(this.other.at(-1).to)
+            this.remove(this.other.at(-1)?.to)
         }
     }
 })
