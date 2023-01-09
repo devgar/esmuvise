@@ -53,9 +53,10 @@ a:hover, a:focus{
 a.active{
     transition: 0.5s;
     background-color: #FFF;
-    border-bottom-color: #333;
+    border-bottom-color: #FFF;
     top: 0.1rem;
-    box-shadow: 0 0 1px #000;
+    box-shadow: -1px -1px 1px #999;
+    box-shadow: inset 1px 1px 1px #999;
     cursor: default;
 }
 </style>

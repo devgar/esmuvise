@@ -5,7 +5,7 @@
         </div>
     </header>
     <header class="sticky">
-        <div class="header-in">    
+        <div class="header-in no-bottom-padding">    
             <TheNav />
         </div>
     </header>
@@ -18,6 +18,9 @@ header {
 }
 .header-in {
     padding: 8px;
+}
+.no-bottom-padding {
+    padding-bottom: 0;
 }
 .sticky {
     position: sticky;
