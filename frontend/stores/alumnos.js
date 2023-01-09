@@ -1,9 +1,17 @@
+function compare( a, b ) {
+    if (a.lastName < b.lastName) return -1
+    if (a.lastName > b.lastName) return 1
+    if (a.firstName < b.firstName) return -1
+    if (a.firstName > b.firstName) return 1
+    return 0
+  }
+
 export const useAlumnoStore = defineStore('alumno', {
     state: () => ({ alumnos: [] }),
     actions: {
         async fetch() {
             const result = await $fetch('/api/alumnos')
-            this.alumnos = result
+            this.alumnos = result.sort(compare)
         }
     }
 })
