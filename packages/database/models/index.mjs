@@ -39,27 +39,10 @@ Object.keys(db).forEach((modelName) => {
 db.sequelize = sequelize
 db.Sequelize = Sequelize
 
-db.IsEmpty = async () => {
-  return !(await db.Alumno.findOne())
-}
-
-db.Initialize = async () => {
-  try {
-    const [alumnos, asignaturas, matriculas] = await Promise.all([
-      import('../seed/alumnos.json'),
-      import('../seed/asignaturas.json'),
-      import('../seed/matriculas.json'),
-    ]) 
-    await Promise.all([
-      db.Alumno.bulkCreate(alumnos),
-      db.Asignatura.bulkCreate(asignaturas),
-      db.Matricula.bulkCreate(matriculas)
-    ])
-  } catch(err){
-    console.warn('Imposible to initialize due to:', err)
-  }
-}
-
 export default db
 export const Alumno = db.Alumno
 export const Asignatura = db.Asignatura
+export const EvaluationItem = db.EvaluationItem
+export const Matricula = db.Matricula
+export const Rubrica = db.Rubrica
+export const RubricaGroup = db.RubricaGroup
