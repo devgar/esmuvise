@@ -1,7 +1,9 @@
 <template>
     <nav>
+        <button @click="addLink">Add</button>
+        <button @click="popLink">Pop</button>
         <ul>
-            <li v-for="{to, label} of items" :key="to" >
+            <li v-for="{to, label} of navStore.links" :key="to" >
                 <NavLink :to="to" :label="label" />
             </li>
         </ul>
@@ -10,12 +12,17 @@
 
 <script lang="ts" setup>
 import NavLink from './_NavLink.vue'
+import { useNavStore } from '~~/stores/nav';
 
-const items = [
-    { to: "/alumnos", label: "Alumnos" },
-    { to: "/asignaturas", label: "Asignaturas" },
-    { to: "/alumno/1", label: "Edgar Albalate Ibáñez" },
-]
+const navStore = useNavStore()
+let count = 0
+
+const addLink = () => {
+    navStore.add({ to:`/alumno/${++count}`, label: `alumno #${count}` })
+}
+const popLink = () => {
+    navStore.pop()
+}
 </script>
 
 <style scoped>
