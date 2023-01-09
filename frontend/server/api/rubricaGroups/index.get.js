@@ -1,5 +1,5 @@
-import { RubricaGroup } from 'database'
+import { RubricaGroup, Alumno } from 'database'
 
-export default defineEventHanlder((_event) => {
+export default defineEventHandler((_event) => {
     return RubricaGroup.findAll()
 })
