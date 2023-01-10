@@ -9,12 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "3.0.0"
-  },
-  "dependencies": {
     "@pinia/nuxt": "^0.4.6",
     "database": "workspace:*",
+    "nuxt": "3.0.0",
     "pinia": "^2.0.28",
     "vue-good-table": "^2.21.11"
+  },
+  "dependencies": {
   }
 }

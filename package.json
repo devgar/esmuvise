@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "pnpm --stream -r build",
     "dev": "pnpm --stream -r dev",
     "test": "pnpm --stream -r test",
-    "build": "pnpm --stream -r build"
+    "start": "cd frontend; node .output/server/index.mjs"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,7 @@
     "url": "https://github.com/devgar/esmuvise/issues"
   },
   "homepage": "https://github.com/devgar/esmuvise#readme",
-  "dependencies": {
+  "devDependencies": {
     "pnpm": "^7.22.0"
   },
   "workspaces": [
