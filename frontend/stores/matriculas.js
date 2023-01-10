@@ -12,6 +12,10 @@ export const useMatriculaStore = defineStore('matricula', {
         async fetch() {
             const result = await $fetch('/api/matriculas')
             this.matriculas = result
+        },
+        async fetchFull() {
+            const result = await $fetch('/api/matriculas?full')
+            this.matriculas = result
         }
     }
 })

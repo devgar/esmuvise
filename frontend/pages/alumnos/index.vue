@@ -1,11 +1,13 @@
 <template>
-    <div>
+    <div class="alumnos-list">
         <h4 v-for="al of alumnoStore.alumnos" :key="al.id">
             <div class="half">
-                {{ al.lastName }}, {{ al.firstName }}
+                <NuxtLink :to="`/alumno/${al.id}`">
+                    {{ al.lastName }}, {{ al.firstName }}
+                </NuxtLink>
             </div>
             <div class="half">
-                {{ matriculaStore.byAlumnoId(al.id)?.length }} Asignaturas
+                <Matriculas :alumno-id="al.id" />
             </div>
         </h4>
     </div>
@@ -13,21 +15,23 @@
 
 <script setup>
 import { useAlumnoStore } from '~~/stores/alumnos'
-import { useMatriculaStore } from '~~/stores/matriculas'
+import Matriculas from './_matriculas.vue'
+
 const alumnoStore = useAlumnoStore()
-const matriculaStore = useMatriculaStore()
 </script>
 
 <style scoped>
-div {
+.alumnos-list {
     padding: 0.8rem 0;
 }
 h4 {
     margin: 0.4rem 0;
+    display: flex;
 }
-h4 div {
+h4 div.half {
     padding: 0;
     width:50%;
     display: inline-block;
+    flex-grow: 1;
 }
 </style>

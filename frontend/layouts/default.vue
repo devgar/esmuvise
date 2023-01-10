@@ -10,6 +10,6 @@ import { useMatriculaStore } from '~~/stores/matriculas'
 import { useAsignaturaStore } from '~~/stores/asignaturas'
 
 useAlumnoStore().fetch()
-useMatriculaStore().fetch()
+useMatriculaStore().fetchFull()
 useAsignaturaStore().fetch()
 </script>
