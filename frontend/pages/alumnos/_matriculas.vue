@@ -12,13 +12,10 @@
 import { useMatriculaStore } from '~~/stores/matriculas'
 
 const props = defineProps({ alumnoId: Number })
-const matriculaStore = useMatriculaStore()
+const $matriculas = useMatriculaStore()
 const errorMsg = computed(() => props.alumnoId ? '' : 'Error')
-const filter = (m) => m.AlumnoId === props.alumnoId
 
-const asignaturas = computed(
-    () => matriculaStore.matriculas.filter((m) => m.AlumnoId === props.alumnoId)
-)
+const asignaturas = computed(() => $matriculas.byAlumnoId(props.alumnoId))
 </script>
 
 <style scoped>
