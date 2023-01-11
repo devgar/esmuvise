@@ -17,6 +17,5 @@ export default defineEventHandler((event) => {
     const full = getQuery(event).full
     if (full !== undefined) relations.add(Alumno).add(Asignatura)
     const include = Array.from(relations)
-    console.log({ include })
     return Matricula.findAll({ include, where })
 })
