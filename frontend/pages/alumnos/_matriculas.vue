@@ -2,8 +2,8 @@
     <div v-if="errorMsg">{{  errorMsg }}</div>
     <div v-else-if="asignaturas.length == 0">Sin matricular</div>
     <div v-else class="asignaturas">
-        <div class="asignatura" v-for="a in asignaturas" :key="a.id">
-            <NuxtLink :to="`/alumno/${props.alumnoId}/asignatura/${a.id}`">{{a.nameVLC}}</NuxtLink>
+        <div class="asignatura" v-for="{ id, Asignatura} in asignaturas" :key="id">
+            <NuxtLink :to="`/alumno/${props.alumnoId}/matriculas/${id}`">{{Asignatura.nameVLC}}</NuxtLink>
         </div>
     </div>
 </template>
@@ -15,10 +15,9 @@ const props = defineProps({ alumnoId: Number })
 const matriculaStore = useMatriculaStore()
 const errorMsg = computed(() => props.alumnoId ? '' : 'Error')
 const filter = (m) => m.AlumnoId === props.alumnoId
-const map = (m) => m.Asignatura
 
 const asignaturas = computed(
-    () => matriculaStore.matriculas.filter((m) => m.AlumnoId === props.alumnoId).map(map)
+    () => matriculaStore.matriculas.filter((m) => m.AlumnoId === props.alumnoId)
 )
 </script>
 

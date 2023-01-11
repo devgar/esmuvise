@@ -24,9 +24,14 @@ const alumnoStore = useAlumnoStore()
 .alumnos-list {
     padding: 0.8rem 0;
 }
+
 h4 {
     margin: 0.4rem 0;
     display: flex;
+}
+
+h4:nth-child(2n) {
+    background: #f5e5e0;
 }
 h4 div.half {
     padding: 0;
