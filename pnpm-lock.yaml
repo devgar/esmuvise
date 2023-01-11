@@ -14,13 +14,11 @@ importers:
       database: workspace:*
       nuxt: 3.0.0
       pinia: ^2.0.28
-      vue-good-table: ^2.21.11
     devDependencies:
       '@pinia/nuxt': 0.4.6
       database: link:../packages/database
       nuxt: 3.0.0
       pinia: 2.0.28
-      vue-good-table: 2.21.11
 
   packages/database:
     specifiers:
@@ -1727,11 +1725,6 @@ packages:
     engines: {node: '>= 12'}
     dev: true
 
-  /date-fns/2.29.3:
-    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
-    engines: {node: '>=0.11'}
-    dev: true
-
   /debug/2.6.9:
     resolution: {integrity: sha512-bC7ElrdJaJnPbAP+1EotYvqZsb3ecl5wi6Bfi6BJTUcNowp6cvspg0jXznRTKDjm/E7AdgFBVeAPVMNcKGsHMA==}
     peerDependencies:
@@ -2910,10 +2903,6 @@ packages:
 
   /lodash.isarguments/3.1.0:
     resolution: {integrity: sha512-chi4NHZlZqZD18a0imDHnZPrDeBbTtVN7GXMwuGdRH9qotxAjYs3aVLKc7zNOG9eddR5Ksd8rvFEBc9SsggPpg==}
-    dev: true
-
-  /lodash.isequal/4.5.0:
-    resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
     dev: true
 
   /lodash.isplainobject/4.0.6:
@@ -5054,13 +5043,6 @@ packages:
 
   /vue-devtools-stub/0.1.0:
     resolution: {integrity: sha512-RutnB7X8c5hjq39NceArgXg28WZtZpGc3+J16ljMiYnFhKvd8hITxSWQSQ5bvldxMDU6gG5mkxl1MTQLXckVSQ==}
-    dev: true
-
-  /vue-good-table/2.21.11:
-    resolution: {integrity: sha512-OpVPdxbBTahtfq1aXxEa5P1CMy1wiLcBg4mo7k6Qs537l9v8KVrvF+fXqbnxqNrAfmd1Mw9LidcjgTErjmVU8g==}
-    dependencies:
-      date-fns: 2.29.3
-      lodash.isequal: 4.5.0
     dev: true
 
   /vue-router/4.1.6_vue@3.2.45:

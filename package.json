@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "pnpm --stream -r build",
+    "ci": "pnpm i && npm run build", 
+    "clean": "npm x --yes rimraf **/node_modules",
     "dev": "pnpm --stream -r dev",
     "test": "pnpm --stream -r test",
+    "pnpm": "npm x --y pnpm",
     "start": "cd frontend; node .output/server/index.mjs"
   },
   "repository": {
