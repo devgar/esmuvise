@@ -130,5 +130,4 @@ dist
 .pnp.*
 
 seed/alumnos.json
-seed/asignaturas.json
 seed/matriculas.json
