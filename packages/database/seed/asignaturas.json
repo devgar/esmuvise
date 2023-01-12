@@ -1,0 +1,1916 @@
+[
+  {
+    "id": 1,
+    "nameCAS": "Trombón",
+    "nameVLC": "Trombó"
+  },
+  {
+    "id": 2,
+    "nameCAS": "Trompeta",
+    "nameVLC": "Trompeta"
+  },
+  {
+    "id": 4,
+    "nameCAS": "Viola",
+    "nameVLC": "Viola"
+  },
+  {
+    "id": 5,
+    "nameCAS": "Violín",
+    "nameVLC": "Violí"
+  },
+  {
+    "id": 10,
+    "nameCAS": "Música de Cámara",
+    "nameVLC": "Música de Cambra"
+  },
+  {
+    "id": 14,
+    "nameCAS": "Composición",
+    "nameVLC": "Composició"
+  },
+  {
+    "id": 15,
+    "nameCAS": "Contrapunto",
+    "nameVLC": "Contrapunt"
+  },
+  {
+    "id": 18,
+    "nameCAS": "Historia de la cultura y el arte",
+    "nameVLC": "Història de la cultura i l'art"
+  },
+  {
+    "id": 20,
+    "nameCAS": "Violoncello",
+    "nameVLC": "Violoncel"
+  },
+  {
+    "id": 21,
+    "nameCAS": "Contrabajo",
+    "nameVLC": "Contrabaix"
+  },
+  {
+    "id": 22,
+    "nameCAS": "Flauta de Pico",
+    "nameVLC": "Flauta Dolça"
+  },
+  {
+    "id": 23,
+    "nameCAS": "Oboe",
+    "nameVLC": "Oboé"
+  },
+  {
+    "id": 24,
+    "nameCAS": "Clarinete",
+    "nameVLC": "Clarinet"
+  },
+  {
+    "id": 25,
+    "nameCAS": "Fagot",
+    "nameVLC": "Fagot"
+  },
+  {
+    "id": 26,
+    "nameCAS": "Trompa",
+    "nameVLC": "Trompa"
+  },
+  {
+    "id": 27,
+    "nameCAS": "Tuba",
+    "nameVLC": "Tuba"
+  },
+  {
+    "id": 28,
+    "nameCAS": "Arpa",
+    "nameVLC": "Arpa"
+  },
+  {
+    "id": 29,
+    "nameCAS": "Percusión",
+    "nameVLC": "Percussió"
+  },
+  {
+    "id": 30,
+    "nameCAS": "Saxofón",
+    "nameVLC": "Saxòfon"
+  },
+  {
+    "id": 31,
+    "nameCAS": "Guitarra",
+    "nameVLC": "Guitarra"
+  },
+  {
+    "id": 32,
+    "nameCAS": "Piano",
+    "nameVLC": "Piano"
+  },
+  {
+    "id": 33,
+    "nameCAS": "Canto",
+    "nameVLC": "Cant"
+  },
+  {
+    "id": 34,
+    "nameCAS": "Órgano",
+    "nameVLC": "Orgue"
+  },
+  {
+    "id": 35,
+    "nameCAS": "Clave",
+    "nameVLC": "Clavecí"
+  },
+  {
+    "id": 36,
+    "nameCAS": "Lenguaje Musical",
+    "nameVLC": "Llenguatge Musical"
+  },
+  {
+    "id": 37,
+    "nameCAS": "Orquesta",
+    "nameVLC": "Orquestra"
+  },
+  {
+    "id": 39,
+    "nameCAS": "Armonía",
+    "nameVLC": "Harmonia"
+  },
+  {
+    "id": 40,
+    "nameCAS": "Piano Complementario",
+    "nameVLC": "Piano Complementari"
+  },
+  {
+    "id": 41,
+    "nameCAS": "Análisis",
+    "nameVLC": "Anàlisi"
+  },
+  {
+    "id": 42,
+    "nameCAS": "Coro",
+    "nameVLC": "Cor"
+  },
+  {
+    "id": 43,
+    "nameCAS": "Instrumento Complementario",
+    "nameVLC": "Instrument Complementari"
+  },
+  {
+    "id": 44,
+    "nameCAS": "Acompañamiento",
+    "nameVLC": "Acompanyament"
+  },
+  {
+    "id": 46,
+    "nameCAS": "Alemán",
+    "nameVLC": "Alemany"
+  },
+  {
+    "id": 47,
+    "nameCAS": "Italiano",
+    "nameVLC": "Italià"
+  },
+  {
+    "id": 48,
+    "nameCAS": "Francés",
+    "nameVLC": "Francés"
+  },
+  {
+    "id": 55,
+    "nameCAS": "Inglés",
+    "nameVLC": "Anglés"
+  },
+  {
+    "id": 56,
+    "nameCAS": "Ruso",
+    "nameVLC": "Rus"
+  },
+  {
+    "id": 57,
+    "nameCAS": "Árabe",
+    "nameVLC": "Àrab"
+  },
+  {
+    "id": 58,
+    "nameCAS": "Valenciano",
+    "nameVLC": "Valencià"
+  },
+  {
+    "id": 59,
+    "nameCAS": "Español para extranjeros",
+    "nameVLC": "Espanyol per a estrangers"
+  },
+  {
+    "id": 60,
+    "nameCAS": "Módulo 1",
+    "nameVLC": "Mòdul 1"
+  },
+  {
+    "id": 61,
+    "nameCAS": "Módulo 2",
+    "nameVLC": "Mòdul 2"
+  },
+  {
+    "id": 62,
+    "nameCAS": "Módulo 3",
+    "nameVLC": "Mòdul 3"
+  },
+  {
+    "id": 63,
+    "nameCAS": "Módulo 4",
+    "nameVLC": "Mòdul 4"
+  },
+  {
+    "id": 64,
+    "nameCAS": "Módulo 5",
+    "nameVLC": "Mòdul 5"
+  },
+  {
+    "id": 65,
+    "nameCAS": "Módulo 6",
+    "nameVLC": "Mòdul 6"
+  },
+  {
+    "id": 66,
+    "nameCAS": "Módulo 7",
+    "nameVLC": "Mòdul 7"
+  },
+  {
+    "id": 67,
+    "nameCAS": "Módulo 8",
+    "nameVLC": "Mòdul 8"
+  },
+  {
+    "id": 68,
+    "nameCAS": "Módulo 9",
+    "nameVLC": "Mòdul 9"
+  },
+  {
+    "id": 69,
+    "nameCAS": "Acordeón",
+    "nameVLC": "Acordió"
+  },
+  {
+    "id": 70,
+    "nameCAS": "Flauta Travesera",
+    "nameVLC": "Flauta Travessera"
+  },
+  {
+    "id": 74,
+    "nameCAS": "Musicología",
+    "nameVLC": "Musicologia"
+  },
+  {
+    "id": 76,
+    "nameCAS": "Prácticas de Profesor",
+    "nameVLC": "Pràctiques de Professor"
+  },
+  {
+    "id": 78,
+    "nameCAS": "Viola de Gamba",
+    "nameVLC": "Viola de Gamba"
+  },
+  {
+    "id": 86,
+    "nameCAS": "Educación auditiva",
+    "nameVLC": "Educació auditiva"
+  },
+  {
+    "id": 87,
+    "nameCAS": "Historia de la Música",
+    "nameVLC": "Història de la Música"
+  },
+  {
+    "id": 88,
+    "nameCAS": "Organologia y acustica",
+    "nameVLC": "Organologia i acustica"
+  },
+  {
+    "id": 90,
+    "nameCAS": "Música de camara/Conjunto",
+    "nameVLC": "Música de camara/Conjunt"
+  },
+  {
+    "id": 91,
+    "nameCAS": "Fundamentos de mecánica y mantenimiento",
+    "nameVLC": "Fonaments de mecànica i manteniment"
+  },
+  {
+    "id": 93,
+    "nameCAS": "Improvisación y acompañamiento",
+    "nameVLC": "Improvisació i acompanyament"
+  },
+  {
+    "id": 101,
+    "nameCAS": "Continuo",
+    "nameVLC": "Continu"
+  },
+  {
+    "id": 107,
+    "nameCAS": "Repertorio orquestal",
+    "nameVLC": "Repertori orquestral"
+  },
+  {
+    "id": 115,
+    "nameCAS": "Concertación",
+    "nameVLC": "Concertació"
+  },
+  {
+    "id": 121,
+    "nameCAS": "Técnica corporal",
+    "nameVLC": "Tècnica corporal"
+  },
+  {
+    "id": 133,
+    "nameCAS": "Fuentes hist. inter. renacentista y barr",
+    "nameVLC": "Fonts hist. inter. renacentista i barroc"
+  },
+  {
+    "id": 135,
+    "nameCAS": "Instrumentación y orquestación",
+    "nameVLC": "Instrumentació i orquestració"
+  },
+  {
+    "id": 143,
+    "nameCAS": "Estética musical",
+    "nameVLC": "Estetica musical"
+  },
+  {
+    "id": 153,
+    "nameCAS": "Reducción de partituras",
+    "nameVLC": "Reducció de partitures"
+  },
+  {
+    "id": 157,
+    "nameCAS": "Dirección de Orquesta",
+    "nameVLC": "Direcció d'Orquestra"
+  },
+  {
+    "id": 163,
+    "nameCAS": "Sociología de la música",
+    "nameVLC": "Sociologia de la música"
+  },
+  {
+    "id": 167,
+    "nameCAS": "Instrumento de tecla o segundo inst.",
+    "nameVLC": "Instrument de tecla o segon inst."
+  },
+  {
+    "id": 191,
+    "nameCAS": "Dirección de Coro",
+    "nameVLC": "Direcció de Cor"
+  },
+  {
+    "id": 194,
+    "nameCAS": "Música de tradición oral",
+    "nameVLC": "Mùsica de tradició oral"
+  },
+  {
+    "id": 210,
+    "nameCAS": "Fundamentos de Etnomusicología",
+    "nameVLC": "Fonaments d'Etnomusicologìa"
+  },
+  {
+    "id": 211,
+    "nameCAS": "Notación",
+    "nameVLC": "Notació"
+  },
+  {
+    "id": 213,
+    "nameCAS": "Instrumento de Tecla",
+    "nameVLC": "Instrument de Tecla"
+  },
+  {
+    "id": 216,
+    "nameCAS": "Tablatura",
+    "nameVLC": "Tablatura"
+  },
+  {
+    "id": 217,
+    "nameCAS": "Instrumento Principal",
+    "nameVLC": "Instrument Principal"
+  },
+  {
+    "id": 223,
+    "nameCAS": "Instrumento de Tecla o Continuo",
+    "nameVLC": "Instrument de Tecla o Continu"
+  },
+  {
+    "id": 229,
+    "nameCAS": "Instrumentos de Pua",
+    "nameVLC": "Instruments de Plectre"
+  },
+  {
+    "id": 234,
+    "nameCAS": "Armonía de Jazz",
+    "nameVLC": "Harmonia de Jazz"
+  },
+  {
+    "id": 235,
+    "nameCAS": "Rítmica de Jazz",
+    "nameVLC": "Rítmica de Jazz"
+  },
+  {
+    "id": 236,
+    "nameCAS": "Historia de la música del Jazz",
+    "nameVLC": "Història de la música del Jazz"
+  },
+  {
+    "id": 237,
+    "nameCAS": "Big Band",
+    "nameVLC": "Big Band"
+  },
+  {
+    "id": 239,
+    "nameCAS": "Arreglos",
+    "nameVLC": "Arreglaments"
+  },
+  {
+    "id": 240,
+    "nameCAS": "Composición de Jazz",
+    "nameVLC": "Composició de Jazz"
+  },
+  {
+    "id": 244,
+    "nameCAS": "Canto gregoriano",
+    "nameVLC": "Cant gregorià"
+  },
+  {
+    "id": 248,
+    "nameCAS": "Didáctica de la música",
+    "nameVLC": "Didàctica de la música"
+  },
+  {
+    "id": 256,
+    "nameCAS": "Música popular española",
+    "nameVLC": "Música popular espanyola"
+  },
+  {
+    "id": 260,
+    "nameCAS": "Sociología de la educación",
+    "nameVLC": "Sociologia de l'educació"
+  },
+  {
+    "id": 261,
+    "nameCAS": "Composición aplicada",
+    "nameVLC": "Composició aplicada"
+  },
+  {
+    "id": 272,
+    "nameCAS": "Didáctica de la especialidad",
+    "nameVLC": "Didàctica de l'especialitat"
+  },
+  {
+    "id": 281,
+    "nameCAS": "La técnica del arpa y su evolución",
+    "nameVLC": "La tècnica de l'arpa i la seua evolució"
+  },
+  {
+    "id": 282,
+    "nameCAS": "Historia del arpa y su literatura",
+    "nameVLC": "Història de l'arpa i la seua literatura"
+  },
+  {
+    "id": 283,
+    "nameCAS": "Historia del canto",
+    "nameVLC": "Història del cant"
+  },
+  {
+    "id": 284,
+    "nameCAS": "Escena",
+    "nameVLC": "Escena"
+  },
+  {
+    "id": 285,
+    "nameCAS": "Repertorio",
+    "nameVLC": "Repertori"
+  },
+  {
+    "id": 286,
+    "nameCAS": "Teoría del canto",
+    "nameVLC": "Teoría del cant"
+  },
+  {
+    "id": 287,
+    "nameCAS": "Fonética e idiomas",
+    "nameVLC": "Fonètica e idiomes"
+  },
+  {
+    "id": 288,
+    "nameCAS": "Historia del clave y su literatura",
+    "nameVLC": "Història del clavecí i la seua literatura"
+  },
+  {
+    "id": 289,
+    "nameCAS": "Música para escena, tv y m. audiovisual",
+    "nameVLC": "Música per a escena, tv, i m. audiovisua"
+  },
+  {
+    "id": 290,
+    "nameCAS": "Informática musical",
+    "nameVLC": "Informàtica musical"
+  },
+  {
+    "id": 291,
+    "nameCAS": "Electroacústica",
+    "nameVLC": "Electroacústica"
+  },
+  {
+    "id": 292,
+    "nameCAS": "Música contemporanea",
+    "nameVLC": "Música Contemporània"
+  },
+  {
+    "id": 293,
+    "nameCAS": "Fundamentos de violeria",
+    "nameVLC": "Fonaments de violeria"
+  },
+  {
+    "id": 295,
+    "nameCAS": "Inst. cuerda pulsada renac. y barroco",
+    "nameVLC": "Inst. corda polsada renaix. i el barroc"
+  },
+  {
+    "id": 296,
+    "nameCAS": "Liturgia",
+    "nameVLC": "Litúrgia"
+  },
+  {
+    "id": 297,
+    "nameCAS": "Historia de la música valenciana",
+    "nameVLC": "Història de la música valenciana"
+  },
+  {
+    "id": 298,
+    "nameCAS": "Metodología de la investigación",
+    "nameVLC": "Metodologia de la investigació"
+  },
+  {
+    "id": 299,
+    "nameCAS": "His. y A. de la teoría y técnica musical",
+    "nameVLC": "His. y A. de la teoria y tecnica musical"
+  },
+  {
+    "id": 300,
+    "nameCAS": "Paleografía latina y española",
+    "nameVLC": "Paleografia llatina i espanyola"
+  },
+  {
+    "id": 301,
+    "nameCAS": "Historia del órgano y su literatura",
+    "nameVLC": "Història de l'orgue i la seua literatura"
+  },
+  {
+    "id": 302,
+    "nameCAS": "Orquesta/Conjunto",
+    "nameVLC": "Orquestra/Conjunt"
+  },
+  {
+    "id": 303,
+    "nameCAS": "Pedagogía del lenguaje y la ed. musical",
+    "nameVLC": "Pedagogia del llenguatge i l'ed. músical"
+  },
+  {
+    "id": 304,
+    "nameCAS": "Didáctica del conjunto Instrumental",
+    "nameVLC": "Didàctica del conjunt instrumental"
+  },
+  {
+    "id": 305,
+    "nameCAS": "Hª de la educación musical",
+    "nameVLC": "Hª de l'educació musical"
+  },
+  {
+    "id": 306,
+    "nameCAS": "Psicopedagogía",
+    "nameVLC": "Psicopedagogía"
+  },
+  {
+    "id": 307,
+    "nameCAS": "Dirección aplicada",
+    "nameVLC": "Direcció aplicada"
+  },
+  {
+    "id": 308,
+    "nameCAS": "Movimiento",
+    "nameVLC": "Moviment"
+  },
+  {
+    "id": 309,
+    "nameCAS": "Pedagogía del Canto e instrumentos",
+    "nameVLC": "Pedagogia del cant e instruments"
+  },
+  {
+    "id": 310,
+    "nameCAS": "La técnica pianística y su evolución",
+    "nameVLC": "La tècnica pianística y la seua evolució"
+  },
+  {
+    "id": 311,
+    "nameCAS": "Historia del piano y su literatura",
+    "nameVLC": "Història del piano i la seua literatura"
+  },
+  {
+    "id": 312,
+    "nameCAS": "Repertorio de Jazz",
+    "nameVLC": "Repertori de Jazz"
+  },
+  {
+    "id": 313,
+    "nameCAS": "Inst. de tecla complementario",
+    "nameVLC": "Inst. de tecla complementari"
+  },
+  {
+    "id": 315,
+    "nameCAS": "Chino",
+    "nameVLC": "Xinès"
+  },
+  {
+    "id": 316,
+    "nameCAS": "Danés",
+    "nameVLC": "Danés"
+  },
+  {
+    "id": 317,
+    "nameCAS": "Euskera",
+    "nameVLC": "Èuscar"
+  },
+  {
+    "id": 318,
+    "nameCAS": "Finés",
+    "nameVLC": "Finés"
+  },
+  {
+    "id": 319,
+    "nameCAS": "Gallego",
+    "nameVLC": "Gallec"
+  },
+  {
+    "id": 320,
+    "nameCAS": "Griego",
+    "nameVLC": "Grec"
+  },
+  {
+    "id": 321,
+    "nameCAS": "Irlandés",
+    "nameVLC": "Irlandés"
+  },
+  {
+    "id": 322,
+    "nameCAS": "Japonés",
+    "nameVLC": "Japonés"
+  },
+  {
+    "id": 323,
+    "nameCAS": "Neerlandés",
+    "nameVLC": "Neerlandés"
+  },
+  {
+    "id": 324,
+    "nameCAS": "Portugués",
+    "nameVLC": "Portugués"
+  },
+  {
+    "id": 325,
+    "nameCAS": "Rumano",
+    "nameVLC": "Romanés"
+  },
+  {
+    "id": 326,
+    "nameCAS": "Sueco",
+    "nameVLC": "Suec"
+  },
+  {
+    "id": 327,
+    "nameCAS": "Investigación sobre repertorio violín",
+    "nameVLC": "Investigació sobre repertori del violí"
+  },
+  {
+    "id": 328,
+    "nameCAS": "Investigación sobre repertorio viola",
+    "nameVLC": "Investigació sobre repertori viola"
+  },
+  {
+    "id": 329,
+    "nameCAS": "Investigación repertorio violoncello",
+    "nameVLC": "Investigació repertori violoncello"
+  },
+  {
+    "id": 330,
+    "nameCAS": "Investigación repertorio contrabajo",
+    "nameVLC": "Investigació repertori contrabaix"
+  },
+  {
+    "id": 331,
+    "nameCAS": "Investigación repertorio ins. C. Pulsada",
+    "nameVLC": "Investigació repertori ins. C. Polsada"
+  },
+  {
+    "id": 332,
+    "nameCAS": "Repertorio ins. C. Pulsada",
+    "nameVLC": "Repertori ins. C. Polsada"
+  },
+  {
+    "id": 333,
+    "nameCAS": "Investigación repertorio Oboé",
+    "nameVLC": "Investigació repertori Oboé"
+  },
+  {
+    "id": 334,
+    "nameCAS": "Investigación repertorio Clarinete",
+    "nameVLC": "Investigació repertori  Clarinet"
+  },
+  {
+    "id": 335,
+    "nameCAS": "Investigación repertorio Fagot",
+    "nameVLC": "Investigació repertori Fagot"
+  },
+  {
+    "id": 336,
+    "nameCAS": "Investigación repertorio Saxofón",
+    "nameVLC": "Investigació repertori Saxòfon"
+  },
+  {
+    "id": 337,
+    "nameCAS": "Investigación repertorio trombón",
+    "nameVLC": "Investigació repertori trombó"
+  },
+  {
+    "id": 338,
+    "nameCAS": "Investigación repertorio trompeta",
+    "nameVLC": "Investigació repertori trompeta"
+  },
+  {
+    "id": 339,
+    "nameCAS": "Investigación repertorio trompa",
+    "nameVLC": "Investigació repertori trompa"
+  },
+  {
+    "id": 340,
+    "nameCAS": "Investigación repertorio tuba",
+    "nameVLC": "Investigació repertori tuba"
+  },
+  {
+    "id": 341,
+    "nameCAS": "Flauta",
+    "nameVLC": "Flauta"
+  },
+  {
+    "id": 342,
+    "nameCAS": "Investigación repertorio flauta traveser",
+    "nameVLC": "Investigació repertori flauta travessera"
+  },
+  {
+    "id": 343,
+    "nameCAS": "Investigación repertorio guitarra",
+    "nameVLC": "Investigació repertori guitarra"
+  },
+  {
+    "id": 344,
+    "nameCAS": "Investigación repertorio percusión",
+    "nameVLC": "Investigació repertori percusió"
+  },
+  {
+    "id": 345,
+    "nameCAS": "Instrumentos de música antigua",
+    "nameVLC": "Instruments de música antiga"
+  },
+  {
+    "id": 346,
+    "nameCAS": "Jazz",
+    "nameVLC": "Jazz"
+  },
+  {
+    "id": 347,
+    "nameCAS": "Investigación repertorio flauta de pico",
+    "nameVLC": "Investigació repertori flauta dolça"
+  },
+  {
+    "id": 348,
+    "nameCAS": "Repertorio flauta de pico",
+    "nameVLC": "Repertori flauta dolça"
+  },
+  {
+    "id": 349,
+    "nameCAS": "Investigación repertorio música antigua",
+    "nameVLC": "Investigació repertorio música antiga"
+  },
+  {
+    "id": 350,
+    "nameCAS": "Investigación repertorio jazz",
+    "nameVLC": "Investigació repertori jazz"
+  },
+  {
+    "id": 351,
+    "nameCAS": "Repertorio de BIG BAND",
+    "nameVLC": "Repertori de BIG BAND"
+  },
+  {
+    "id": 352,
+    "nameCAS": "Corbe",
+    "nameVLC": "Corbe"
+  },
+  {
+    "id": 353,
+    "nameCAS": "Improvisación de Jazz",
+    "nameVLC": "Improvisació de Jazz"
+  },
+  {
+    "id": 354,
+    "nameCAS": "Educación auditiva de jazz",
+    "nameVLC": "Educació auditiva de jazz"
+  },
+  {
+    "id": 355,
+    "nameCAS": "Investigación repertorio viola de gamba",
+    "nameVLC": "Investigació repertori viola de gamba"
+  },
+  {
+    "id": 356,
+    "nameCAS": "Repertorio de Viola de Gamba",
+    "nameVLC": "Repertori de Viola de Gamba"
+  },
+  {
+    "id": 357,
+    "nameCAS": "Catalán",
+    "nameVLC": "Català"
+  },
+  {
+    "id": 360,
+    "nameCAS": "Repertorio de música antigua",
+    "nameVLC": "Repertori de música antiga"
+  },
+  {
+    "id": 361,
+    "nameCAS": "Fundamentos de composición",
+    "nameVLC": "Fonaments de composició"
+  },
+  {
+    "id": 364,
+    "nameCAS": "Educación Vocal",
+    "nameVLC": "Educació Vocal"
+  },
+  {
+    "id": 374,
+    "nameCAS": "Investigación repertorio Flauta",
+    "nameVLC": "Investigació repertori Flauta"
+  },
+  {
+    "id": 379,
+    "nameCAS": "Trabajo de investigación",
+    "nameVLC": "Treball d'investigació"
+  },
+  {
+    "id": 384,
+    "nameCAS": "Dulzaina",
+    "nameVLC": "Dolçaina"
+  },
+  {
+    "id": 385,
+    "nameCAS": "Tabalet",
+    "nameVLC": "Tabalet"
+  },
+  {
+    "id": 387,
+    "nameCAS": "Comprensión oral",
+    "nameVLC": "Comprensió oral"
+  },
+  {
+    "id": 388,
+    "nameCAS": "Expresión e interacción oral",
+    "nameVLC": "Expressió i interacció oral"
+  },
+  {
+    "id": 389,
+    "nameCAS": "Comprensión escrita",
+    "nameVLC": "Comprensió escrita"
+  },
+  {
+    "id": 390,
+    "nameCAS": "Expresión e interacción escrita",
+    "nameVLC": "Expressió i interacció escrita"
+  },
+  {
+    "id": 393,
+    "nameCAS": "Conjunto",
+    "nameVLC": "Conjunt"
+  },
+  {
+    "id": 394,
+    "nameCAS": "Orquesta/Banda",
+    "nameVLC": "Orquestra/Banda"
+  },
+  {
+    "id": 396,
+    "nameCAS": "Orquesta/Banda/Conjunto",
+    "nameVLC": "Orquestra/Banda/Conjunt"
+  },
+  {
+    "id": 397,
+    "nameCAS": "Clave complementario",
+    "nameVLC": "Clavecí complementari"
+  },
+  {
+    "id": 407,
+    "nameCAS": "Oboe Barroco",
+    "nameVLC": "Oboé Barroc"
+  },
+  {
+    "id": 408,
+    "nameCAS": "Violín Barroco",
+    "nameVLC": "Violí Barroc"
+  },
+  {
+    "id": 409,
+    "nameCAS": "Traverso",
+    "nameVLC": "Traverso"
+  },
+  {
+    "id": 410,
+    "nameCAS": "Trompa natural",
+    "nameVLC": "Trompa natural"
+  },
+  {
+    "id": 411,
+    "nameCAS": "Trompeta natural",
+    "nameVLC": "Trompeta natural"
+  },
+  {
+    "id": 417,
+    "nameCAS": "Interpretación Canto",
+    "nameVLC": "Interpretació Cant"
+  },
+  {
+    "id": 418,
+    "nameCAS": "Interpretación Arpa",
+    "nameVLC": "Interpretació Arpa"
+  },
+  {
+    "id": 419,
+    "nameCAS": "Interpretación Clave",
+    "nameVLC": "Interpretació Clavecí"
+  },
+  {
+    "id": 420,
+    "nameCAS": "Interpretación Guitarra",
+    "nameVLC": "Interpretació Guitarra"
+  },
+  {
+    "id": 422,
+    "nameCAS": "Interpretación Clarinete <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Clarinet <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 423,
+    "nameCAS": "Interpretación Violín Barroco <Instr. Mús. Ant.>",
+    "nameVLC": "Interpretació Violí Barroc <Instr. Mús. Ant.>"
+  },
+  {
+    "id": 424,
+    "nameCAS": "Interpretación Órgano",
+    "nameVLC": "Interpretació Orgue"
+  },
+  {
+    "id": 425,
+    "nameCAS": "Interpretación Piano",
+    "nameVLC": "Interpretació Piano"
+  },
+  {
+    "id": 426,
+    "nameCAS": "Musicología",
+    "nameVLC": "Musicologia"
+  },
+  {
+    "id": 428,
+    "nameCAS": "Producción y Gestión Musical",
+    "nameVLC": "Producció i Gestió Musical"
+  },
+  {
+    "id": 429,
+    "nameCAS": "Sonología",
+    "nameVLC": "Sonología"
+  },
+  {
+    "id": 430,
+    "nameCAS": "Piano aplicado",
+    "nameVLC": "Piano aplicat"
+  },
+  {
+    "id": 431,
+    "nameCAS": "Idioma extranjero (Inglés)",
+    "nameVLC": "Idioma estranger (Anglés)"
+  },
+  {
+    "id": 432,
+    "nameCAS": "Idioma extranjero (Francés)",
+    "nameVLC": "Idioma estranger (Francés)"
+  },
+  {
+    "id": 433,
+    "nameCAS": "Idioma extranjero (Alemán)",
+    "nameVLC": "Idioma estranger (Alemany)"
+  },
+  {
+    "id": 434,
+    "nameCAS": "Idioma extranjero (Italiano)",
+    "nameVLC": "Idioma estranger (Italià)"
+  },
+  {
+    "id": 435,
+    "nameCAS": "Práctica armonico-contrapuntística",
+    "nameVLC": "Práctica armonico-contrapuntística"
+  },
+  {
+    "id": 436,
+    "nameCAS": "Canto aplicado",
+    "nameVLC": "Cant aplicat"
+  },
+  {
+    "id": 437,
+    "nameCAS": "Instrumento principal (Arpa)",
+    "nameVLC": "Instrument principal (Arpa)"
+  },
+  {
+    "id": 438,
+    "nameCAS": "Técnica corporal y movimiento",
+    "nameVLC": "Tècnica corporal i moviment"
+  },
+  {
+    "id": 439,
+    "nameCAS": "Instrumento principal (Canto)",
+    "nameVLC": "Instrument principal (Cant)"
+  },
+  {
+    "id": 440,
+    "nameCAS": "Repertorio de canto",
+    "nameVLC": "Repertori de cant"
+  },
+  {
+    "id": 441,
+    "nameCAS": "Fonética e idioma aplicado al canto",
+    "nameVLC": "Fonètica i idioma aplicat al cant"
+  },
+  {
+    "id": 442,
+    "nameCAS": "Instrumento principal (Clave)",
+    "nameVLC": "Instrument principal (Clavecí)"
+  },
+  {
+    "id": 443,
+    "nameCAS": "Instrumento principal (Guitarra)",
+    "nameVLC": "Instrument principal (Guitarra)"
+  },
+  {
+    "id": 444,
+    "nameCAS": "Combo",
+    "nameVLC": "Combo"
+  },
+  {
+    "id": 445,
+    "nameCAS": "Instrumento principal (Clarinete)",
+    "nameVLC": "Instrument principal (Clarinet)"
+  },
+  {
+    "id": 446,
+    "nameCAS": "Instrumento principal (Flauta)",
+    "nameVLC": "Instrument principal (Flauta)"
+  },
+  {
+    "id": 447,
+    "nameCAS": "Instrumento principal (Fagot)",
+    "nameVLC": "Instrument principal (Fagot)"
+  },
+  {
+    "id": 448,
+    "nameCAS": "Instrumento principal (Trompeta)",
+    "nameVLC": "Instrument principal (Trompeta)"
+  },
+  {
+    "id": 449,
+    "nameCAS": "Instrumento principal (Trombón)",
+    "nameVLC": "Instrument principal (Trombó)"
+  },
+  {
+    "id": 450,
+    "nameCAS": "Instrumento principal (Trompa)",
+    "nameVLC": "Instrument principal (Trompa)"
+  },
+  {
+    "id": 451,
+    "nameCAS": "Instrumento principal (Tuba)",
+    "nameVLC": "Instrument principal (Tuba)"
+  },
+  {
+    "id": 452,
+    "nameCAS": "Instrumento principal (Violín)",
+    "nameVLC": "Instrument principal (Violí)"
+  },
+  {
+    "id": 453,
+    "nameCAS": "Instrumento principal (Viola)",
+    "nameVLC": "Instrument principal (Viola)"
+  },
+  {
+    "id": 454,
+    "nameCAS": "Instrumento principal (Violoncello)",
+    "nameVLC": "Instrument principal (Violoncel)"
+  },
+  {
+    "id": 455,
+    "nameCAS": "Instrumento principal (Contrabajo)",
+    "nameVLC": "Instrument principal (Contrabaix)"
+  },
+  {
+    "id": 456,
+    "nameCAS": "Instrumento principal (Saxofón)",
+    "nameVLC": "Instrument principal (Saxòfon)"
+  },
+  {
+    "id": 457,
+    "nameCAS": "Instrumento principal (Oboe)",
+    "nameVLC": "Instrument principal (Oboé)"
+  },
+  {
+    "id": 458,
+    "nameCAS": "Banda",
+    "nameVLC": "Banda"
+  },
+  {
+    "id": 459,
+    "nameCAS": "Instrumento afín (Clarinete)",
+    "nameVLC": "Instrument afí (Clarinet)"
+  },
+  {
+    "id": 460,
+    "nameCAS": "Instrumento afín (Flauta)",
+    "nameVLC": "Instrument afí (Flauta)"
+  },
+  {
+    "id": 461,
+    "nameCAS": "Instrumento afín (Fagot)",
+    "nameVLC": "Instrument afí (Fagot)"
+  },
+  {
+    "id": 462,
+    "nameCAS": "Instrumento afín (Trompeta)",
+    "nameVLC": "Instrument afí (Trompeta)"
+  },
+  {
+    "id": 463,
+    "nameCAS": "Instrumento afín (Trombón)",
+    "nameVLC": "Instrument afí (Trombó)"
+  },
+  {
+    "id": 464,
+    "nameCAS": "Instrumento afín (Trompa)",
+    "nameVLC": "Instrument afí (Trompa)"
+  },
+  {
+    "id": 465,
+    "nameCAS": "Instrumento afín (Tuba)",
+    "nameVLC": "Instrument afí (Tuba)"
+  },
+  {
+    "id": 466,
+    "nameCAS": "Instrumento afín (Violín)",
+    "nameVLC": "Instrument afí (Violí)"
+  },
+  {
+    "id": 467,
+    "nameCAS": "Instrumento afín (Viola)",
+    "nameVLC": "Instrument afí (Viola)"
+  },
+  {
+    "id": 468,
+    "nameCAS": "Instrumento afín (Violoncello)",
+    "nameVLC": "Instrument afí (Violoncel)"
+  },
+  {
+    "id": 469,
+    "nameCAS": "Instrumento afín (Contrabajo)",
+    "nameVLC": "Instrument afí (Contrabaix)"
+  },
+  {
+    "id": 470,
+    "nameCAS": "Instrumento afín (Saxofón)",
+    "nameVLC": "Instrument afí (Saxòfon)"
+  },
+  {
+    "id": 471,
+    "nameCAS": "Instrumento afín (Oboe)",
+    "nameVLC": "Instrument afí (Oboé)"
+  },
+  {
+    "id": 472,
+    "nameCAS": "Conjunto instrumental",
+    "nameVLC": "Conjunt instrumental"
+  },
+  {
+    "id": 473,
+    "nameCAS": "Instrumento principal (Órgano)",
+    "nameVLC": "Instrument principal (Orgue)"
+  },
+  {
+    "id": 474,
+    "nameCAS": "Instrumento principal (Piano)",
+    "nameVLC": "Instrument principal (Piano)"
+  },
+  {
+    "id": 475,
+    "nameCAS": "Canto Gregoriano y Liturgia",
+    "nameVLC": "Cant Gregorià i Litúrgia"
+  },
+  {
+    "id": 476,
+    "nameCAS": "Musicología aplicada",
+    "nameVLC": "Musicologia aplicada"
+  },
+  {
+    "id": 477,
+    "nameCAS": "Latín",
+    "nameVLC": "Llatí"
+  },
+  {
+    "id": 478,
+    "nameCAS": "Conjunto instrumental/Vocal",
+    "nameVLC": "Conjunt instrumental/Vocal"
+  },
+  {
+    "id": 479,
+    "nameCAS": "Práctica instrumental",
+    "nameVLC": "Pràctica instrumental"
+  },
+  {
+    "id": 480,
+    "nameCAS": "Didáctica de la educación musical",
+    "nameVLC": "Didàctica de l'educació musical"
+  },
+  {
+    "id": 481,
+    "nameCAS": "Cultura y sociedad",
+    "nameVLC": "Cultura i societat"
+  },
+  {
+    "id": 482,
+    "nameCAS": "Introducción al Marketing",
+    "nameVLC": "Introducció al Màrqueting"
+  },
+  {
+    "id": 483,
+    "nameCAS": "Introducción a legislación del entorno profesional",
+    "nameVLC": "Introducció a legislació de l'entorn professional"
+  },
+  {
+    "id": 484,
+    "nameCAS": "Gestión económica",
+    "nameVLC": "Gestió econòmica"
+  },
+  {
+    "id": 485,
+    "nameCAS": "Técnicas de estudio",
+    "nameVLC": "Tècniques d'estudi"
+  },
+  {
+    "id": 486,
+    "nameCAS": "Acústica y sonorización de salas y eventos",
+    "nameVLC": "Acústica i sonorització de sales i esdeveniments"
+  },
+  {
+    "id": 487,
+    "nameCAS": "Gestión de las artes escénicas y la música",
+    "nameVLC": "Gestió de les arts escèniques i la música"
+  },
+  {
+    "id": 488,
+    "nameCAS": "Análisis",
+    "nameVLC": "Anàlisi"
+  },
+  {
+    "id": 489,
+    "nameCAS": "Educación auditiva",
+    "nameVLC": "Educació auditiva"
+  },
+  {
+    "id": 490,
+    "nameCAS": "Historia de la música",
+    "nameVLC": "Història de la música"
+  },
+  {
+    "id": 491,
+    "nameCAS": "Estética",
+    "nameVLC": "Estetica"
+  },
+  {
+    "id": 492,
+    "nameCAS": "Composición",
+    "nameVLC": "Composició"
+  },
+  {
+    "id": 493,
+    "nameCAS": "Armonía",
+    "nameVLC": "Harmonia"
+  },
+  {
+    "id": 494,
+    "nameCAS": "Contrapunto",
+    "nameVLC": "Contrapunt"
+  },
+  {
+    "id": 495,
+    "nameCAS": "Instrumentación y orquestación",
+    "nameVLC": "Instrumentació i orquestració"
+  },
+  {
+    "id": 496,
+    "nameCAS": "Coro",
+    "nameVLC": "Cor"
+  },
+  {
+    "id": 497,
+    "nameCAS": "Improvisación y acompañamiento",
+    "nameVLC": "Improvisació i acompanyament"
+  },
+  {
+    "id": 498,
+    "nameCAS": "Informática musical",
+    "nameVLC": "Informàtica musical"
+  },
+  {
+    "id": 499,
+    "nameCAS": "Dirección de Coro",
+    "nameVLC": "Direcció de Cor"
+  },
+  {
+    "id": 500,
+    "nameCAS": "Música de Cámara",
+    "nameVLC": "Música de Cambra"
+  },
+  {
+    "id": 501,
+    "nameCAS": "Piano Complementario",
+    "nameVLC": "Piano Complementari"
+  },
+  {
+    "id": 502,
+    "nameCAS": "Armonía de Jazz",
+    "nameVLC": "Harmonia de Jazz"
+  },
+  {
+    "id": 503,
+    "nameCAS": "Rítmica de Jazz",
+    "nameVLC": "Rítmica de Jazz"
+  },
+  {
+    "id": 504,
+    "nameCAS": "Orquesta",
+    "nameVLC": "Orquestra"
+  },
+  {
+    "id": 505,
+    "nameCAS": "Concertación",
+    "nameVLC": "Concertació"
+  },
+  {
+    "id": 506,
+    "nameCAS": "Notación",
+    "nameVLC": "Notació"
+  },
+  {
+    "id": 507,
+    "nameCAS": "Metodología de la investigación",
+    "nameVLC": "Metodologia de la investigació"
+  },
+  {
+    "id": 508,
+    "nameCAS": "Paleografía latina y española",
+    "nameVLC": "Paleografia llatina i espanyola"
+  },
+  {
+    "id": 509,
+    "nameCAS": "Psicopedagogía",
+    "nameVLC": "Psicopedagogía"
+  },
+  {
+    "id": 511,
+    "nameCAS": "Trabajo fin de grado",
+    "nameVLC": "Treball fi de grau"
+  },
+  {
+    "id": 512,
+    "nameCAS": "Actividades culturales",
+    "nameVLC": "Activitats culturals"
+  },
+  {
+    "id": 513,
+    "nameCAS": "Actividades artísticas",
+    "nameVLC": "Activitats artístiques"
+  },
+  {
+    "id": 514,
+    "nameCAS": "Actividades deportivas",
+    "nameVLC": "Activitats esportives"
+  },
+  {
+    "id": 515,
+    "nameCAS": "Actividades de representación estudiantil",
+    "nameVLC": "Activitats de representació estudiantil"
+  },
+  {
+    "id": 516,
+    "nameCAS": "Actividades solidarias y de representación",
+    "nameVLC": "Activitats solidàries i de representació"
+  },
+  {
+    "id": 517,
+    "nameCAS": "Dirección de Orquesta",
+    "nameVLC": "Direcció d'Orquestra"
+  },
+  {
+    "id": 518,
+    "nameCAS": "Prácticas artísticas",
+    "nameVLC": "Pràctiques artístiques"
+  },
+  {
+    "id": 519,
+    "nameCAS": "Interpretación Flauta <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Flauta <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 520,
+    "nameCAS": "Interpretación Oboe <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Oboé <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 521,
+    "nameCAS": "Interpretación Fagot <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Fagot <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 522,
+    "nameCAS": "Interpretación Trompeta <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Trompeta <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 523,
+    "nameCAS": "Interpretación Trombón <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Trombó <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 524,
+    "nameCAS": "Interpretación Trompa <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Trompa <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 525,
+    "nameCAS": "Interpretación Tuba <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Tuba <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 526,
+    "nameCAS": "Interpretación Violín <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Violí <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 527,
+    "nameCAS": "Interpretación Viola <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Viola <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 528,
+    "nameCAS": "Interpretación Violoncello <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Violoncel <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 529,
+    "nameCAS": "Interpretación Contrabajo <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Contrabaix <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 530,
+    "nameCAS": "Interpretación Saxofón <Instr. Orqu. Sinf.>",
+    "nameVLC": "Interpretació Saxòfon <Instr. Orqu. Sinf.>"
+  },
+  {
+    "id": 531,
+    "nameCAS": "Instrumento principal (Violín Barroco)",
+    "nameVLC": "Instrument principal (Violí Barroc)"
+  },
+  {
+    "id": 532,
+    "nameCAS": "Instrumento principal (Viola Barroca)",
+    "nameVLC": "Instrument principal (Viola Barroca)"
+  },
+  {
+    "id": 533,
+    "nameCAS": "Instrumento principal (Violoncello Barroco)",
+    "nameVLC": "Instrument principal (Violoncel Barroc)"
+  },
+  {
+    "id": 534,
+    "nameCAS": "Instrumento principal (Órgano Barroco)",
+    "nameVLC": "Instrument principal (Orgue Barroc)"
+  },
+  {
+    "id": 535,
+    "nameCAS": "Instrumento principal (Oboe Barroco)",
+    "nameVLC": "Instrument principal (Oboé Barroc)"
+  },
+  {
+    "id": 536,
+    "nameCAS": "Instrumento principal (Traverso)",
+    "nameVLC": "Instrument principal (Traverso)"
+  },
+  {
+    "id": 537,
+    "nameCAS": "Instrumento principal (Trompa natural)",
+    "nameVLC": "Instrument principal (Trompa natural)"
+  },
+  {
+    "id": 538,
+    "nameCAS": "Instrumento principal (Trompeta natural)",
+    "nameVLC": "Instrument principal (Trompeta natural)"
+  },
+  {
+    "id": 541,
+    "nameCAS": "Interpretación Viola Barroca <Instr. Mús. Ant.>",
+    "nameVLC": "Interpretació Viola Barroca <Instr. Mús. Ant.>"
+  },
+  {
+    "id": 542,
+    "nameCAS": "Interpretación Violoncello Barroco <Instr. Mús. A>",
+    "nameVLC": "Interpretació Violoncel Barroc <Instr. Mús. Ant.>"
+  },
+  {
+    "id": 543,
+    "nameCAS": "Interpretación Órgano Barroco <Instr. Mús. Ant.>",
+    "nameVLC": "Interpretació Orgue Barroc <Instr. Mús. Ant.>"
+  },
+  {
+    "id": 544,
+    "nameCAS": "Interpretación Oboe Barroco <Instr. Mús. Ant.>",
+    "nameVLC": "Interpretació Oboé Barroc <Instr. Mús. Ant.>"
+  },
+  {
+    "id": 545,
+    "nameCAS": "Interpretación Traverso <Instr. Mús. Ant.>",
+    "nameVLC": "Interpretació Traverso <Instr. Mús. Ant.>"
+  },
+  {
+    "id": 546,
+    "nameCAS": "Interpretación Trompa Natural <Instr. Mús. Ant.>",
+    "nameVLC": "Interpretació Trompa Natural <Instr. Mús. Ant.>"
+  },
+  {
+    "id": 547,
+    "nameCAS": "Interpretación Trompeta Natural <Instr. Mús. Ant.>",
+    "nameVLC": "Interpretació Trompeta Natural <Instr. Mús. Ant.>"
+  },
+  {
+    "id": 548,
+    "nameCAS": "Instrumento principal (Percusión)",
+    "nameVLC": "Instrument principal (Percussió)"
+  },
+  {
+    "id": 549,
+    "nameCAS": "Pedagogía de la Música Arpa",
+    "nameVLC": "Pedagogia de la Música Arpa"
+  },
+  {
+    "id": 550,
+    "nameCAS": "Pedagogía de la Música Canto",
+    "nameVLC": "Pedagogia de la Música Cant"
+  },
+  {
+    "id": 551,
+    "nameCAS": "Pedagogía de la Música Clarinete",
+    "nameVLC": "Pedagogia de la Música Clarinet"
+  },
+  {
+    "id": 552,
+    "nameCAS": "Pedagogía de la Música Clave",
+    "nameVLC": "Pedagogia de la Música Clavecí"
+  },
+  {
+    "id": 553,
+    "nameCAS": "Pedagogía de la Música Contrabajo",
+    "nameVLC": "Pedagogia de la Música Contrabaix"
+  },
+  {
+    "id": 554,
+    "nameCAS": "Pedagogía de la Música Fagot",
+    "nameVLC": "Pedagogia de la Música Fagot"
+  },
+  {
+    "id": 555,
+    "nameCAS": "Pedagogía de la Música Flauta",
+    "nameVLC": "Pedagogia de la Música Flauta"
+  },
+  {
+    "id": 556,
+    "nameCAS": "Pedagogía de la Música Guitarra",
+    "nameVLC": "Pedagogia de la Música Guitarra"
+  },
+  {
+    "id": 557,
+    "nameCAS": "Pedagogía de la Música Oboe",
+    "nameVLC": "Pedagogia de la Música Oboé"
+  },
+  {
+    "id": 558,
+    "nameCAS": "Pedagogía de la Música Órgano",
+    "nameVLC": "Pedagogia de la Música Orgue"
+  },
+  {
+    "id": 559,
+    "nameCAS": "Pedagogía de la Música Percusión",
+    "nameVLC": "Pedagogia de la Música Percussió"
+  },
+  {
+    "id": 560,
+    "nameCAS": "Pedagogía de la Música Piano",
+    "nameVLC": "Pedagogia de la Música Piano"
+  },
+  {
+    "id": 561,
+    "nameCAS": "Pedagogía de la Música Saxofón",
+    "nameVLC": "Pedagogia de la Música Saxòfon"
+  },
+  {
+    "id": 562,
+    "nameCAS": "Pedagogía de la Música Trombón",
+    "nameVLC": "Pedagogia de la Música Trombó"
+  },
+  {
+    "id": 563,
+    "nameCAS": "Pedagogía de la Música Trompa",
+    "nameVLC": "Pedagogia de la Música Trompa"
+  },
+  {
+    "id": 564,
+    "nameCAS": "Pedagogía de la Música Trompeta",
+    "nameVLC": "Pedagogia de la Música Trompeta"
+  },
+  {
+    "id": 565,
+    "nameCAS": "Pedagogía de la Música Tuba",
+    "nameVLC": "Pedagogia de la Música Tuba"
+  },
+  {
+    "id": 566,
+    "nameCAS": "Pedagogía de la Música Viola",
+    "nameVLC": "Pedagogia de la Música Viola"
+  },
+  {
+    "id": 567,
+    "nameCAS": "Pedagogía de la Música Violín",
+    "nameVLC": "Pedagogia de la Música Violín"
+  },
+  {
+    "id": 568,
+    "nameCAS": "Pedagogía de la Música Violoncello",
+    "nameVLC": "Pedagogia de la Música Violoncel"
+  },
+  {
+    "id": 569,
+    "nameCAS": "Interpretación Clarinete <Jazz>",
+    "nameVLC": "Interpretació Clarinet <Jazz>"
+  },
+  {
+    "id": 571,
+    "nameCAS": "Interpretación Contrabajo <Jazz>",
+    "nameVLC": "Interpretació Contrabaix <Jazz>"
+  },
+  {
+    "id": 573,
+    "nameCAS": "Interpretación Flauta <Jazz>",
+    "nameVLC": "Interpretació Flauta <Jazz>"
+  },
+  {
+    "id": 574,
+    "nameCAS": "Interpretación Guitarra <Jazz>",
+    "nameVLC": "Interpretació Guitarra <Jazz>"
+  },
+  {
+    "id": 575,
+    "nameCAS": "Interpretación Percusión <Jazz>",
+    "nameVLC": "Interpretació Percussió <Jazz>"
+  },
+  {
+    "id": 580,
+    "nameCAS": "Interpretación Piano <Jazz>",
+    "nameVLC": "Interpretació Piano <Jazz>"
+  },
+  {
+    "id": 581,
+    "nameCAS": "Interpretación Saxofón <Jazz>",
+    "nameVLC": "Interpretació Saxòfon <Jazz>"
+  },
+  {
+    "id": 583,
+    "nameCAS": "Interpretación Trombón <Jazz>",
+    "nameVLC": "Interpretació Trombó <Jazz>"
+  },
+  {
+    "id": 586,
+    "nameCAS": "Interpretación Trompeta Jazz>",
+    "nameVLC": "Interpretació Trompeta <Jazz>"
+  },
+  {
+    "id": 591,
+    "nameCAS": "Interpretación Violín <Jazz>",
+    "nameVLC": "Interpretació Violí <Jazz>"
+  },
+  {
+    "id": 601,
+    "nameCAS": "M1 Comprensión oral",
+    "nameVLC": "M1 Comprensió oral"
+  },
+  {
+    "id": 602,
+    "nameCAS": "M1 Expresión e interacción oral",
+    "nameVLC": "M1 Expressió i interacció oral"
+  },
+  {
+    "id": 603,
+    "nameCAS": "M1 Comprensión escrita",
+    "nameVLC": "M1 Comprensió escrita"
+  },
+  {
+    "id": 604,
+    "nameCAS": "M1 Expresión e interacción escrita",
+    "nameVLC": "M1 Expressió i interacció escrita"
+  },
+  {
+    "id": 611,
+    "nameCAS": "M2 Comprensión oral",
+    "nameVLC": "M2 Comprensió oral"
+  },
+  {
+    "id": 612,
+    "nameCAS": "M2 Expresión e interacción oral",
+    "nameVLC": "M2 Expressió i interacció oral"
+  },
+  {
+    "id": 613,
+    "nameCAS": "M2 Comprensión escrita",
+    "nameVLC": "M2 Comprensió escrita"
+  },
+  {
+    "id": 614,
+    "nameCAS": "M2 Expresión e interacción escrita",
+    "nameVLC": "M2 Expressió i interacció escrita"
+  },
+  {
+    "id": 621,
+    "nameCAS": "M3 Comprensión oral",
+    "nameVLC": "M3 Comprensió oral"
+  },
+  {
+    "id": 622,
+    "nameCAS": "M3 Expresión e interacción oral",
+    "nameVLC": "M3 Expressió i interacció oral"
+  },
+  {
+    "id": 623,
+    "nameCAS": "M3 Comprensión escrita",
+    "nameVLC": "M3 Comprensió escrita"
+  },
+  {
+    "id": 624,
+    "nameCAS": "M3 Expresión e interacción escrita",
+    "nameVLC": "M3 Expressió i interacció escrita"
+  },
+  {
+    "id": 631,
+    "nameCAS": "M4 Comprensión oral",
+    "nameVLC": "M4 Comprensió oral"
+  },
+  {
+    "id": 632,
+    "nameCAS": "M4 Expresión e interacción oral",
+    "nameVLC": "M4 Expressió i interacció oral"
+  },
+  {
+    "id": 633,
+    "nameCAS": "M4 Comprensión escrita",
+    "nameVLC": "M4 Comprensió escrita"
+  },
+  {
+    "id": 634,
+    "nameCAS": "M4 Expresión e interacción escrita",
+    "nameVLC": "M4 Expressió i interacció escrita"
+  },
+  {
+    "id": 641,
+    "nameCAS": "M5 Comprensión oral",
+    "nameVLC": "M5 Comprensió oral"
+  },
+  {
+    "id": 642,
+    "nameCAS": "M5 Expresión e interacción oral",
+    "nameVLC": "M5 Expressió i interacció oral"
+  },
+  {
+    "id": 643,
+    "nameCAS": "M5 Comprensión escrita",
+    "nameVLC": "M5 Comprensió escrita"
+  },
+  {
+    "id": 644,
+    "nameCAS": "M5 Expresión e interacción escrita",
+    "nameVLC": "M5 Expressió i interacció escrita"
+  },
+  {
+    "id": 651,
+    "nameCAS": "M6 Comprensión oral",
+    "nameVLC": "M6 Comprensió oral"
+  },
+  {
+    "id": 652,
+    "nameCAS": "M6 Expresión e interacción oral",
+    "nameVLC": "M6 Expressió i interacció oral"
+  },
+  {
+    "id": 653,
+    "nameCAS": "M6 Comprensión escrita",
+    "nameVLC": "M6 Comprensió escrita"
+  },
+  {
+    "id": 654,
+    "nameCAS": "M6 Expresión e interacción escrita",
+    "nameVLC": "M6 Expressió i interacció escrita"
+  },
+  {
+    "id": 661,
+    "nameCAS": "M7 Comprensión oral",
+    "nameVLC": "M7 Comprensió oral"
+  },
+  {
+    "id": 662,
+    "nameCAS": "M7 Expresión e interacción oral",
+    "nameVLC": "M7 Expressió i interacció oral"
+  },
+  {
+    "id": 663,
+    "nameCAS": "M7 Comprensión escrita",
+    "nameVLC": "M7 Comprensió escrita"
+  },
+  {
+    "id": 664,
+    "nameCAS": "M7 Expresión e interacción escrita",
+    "nameVLC": "M7 Expressió i interacció escrita"
+  },
+  {
+    "id": 671,
+    "nameCAS": "M8 Comprensión oral",
+    "nameVLC": "M8 Comprensió oral"
+  },
+  {
+    "id": 672,
+    "nameCAS": "M8 Expresión e interacción oral",
+    "nameVLC": "M8 Expressió i interacció oral"
+  },
+  {
+    "id": 673,
+    "nameCAS": "M8 Comprensión escrita",
+    "nameVLC": "M8 Comprensió escrita"
+  },
+  {
+    "id": 674,
+    "nameCAS": "M8 Expresión e interacción escrita",
+    "nameVLC": "M8 Expressió i interacció escrita"
+  },
+  {
+    "id": 681,
+    "nameCAS": "M9 Comprensión oral",
+    "nameVLC": "M9 Comprensió oral"
+  },
+  {
+    "id": 682,
+    "nameCAS": "M9 Expresión e interacción oral",
+    "nameVLC": "M9 Expressió i interacció oral"
+  },
+  {
+    "id": 683,
+    "nameCAS": "M9 Comprensión escrita",
+    "nameVLC": "M9 Comprensió escrita"
+  },
+  {
+    "id": 684,
+    "nameCAS": "M9 Expresión e interacción escrita",
+    "nameVLC": "M9 Expressió i interacció escrita"
+  },
+  {
+    "id": 685,
+    "nameCAS": "Conjunto Guitarra",
+    "nameVLC": "Conjunt Guitarra"
+  },
+  {
+    "id": 686,
+    "nameCAS": "Canto",
+    "nameVLC": "Cant"
+  },
+  {
+    "id": 687,
+    "nameVLC": "guitarra conjunt"
+  }
+]
