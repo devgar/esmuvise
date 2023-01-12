@@ -1,10 +1,12 @@
 <template>
     <div>
-        <h4 v-for="ag of asignaturaStore.asignaturas" :key="ag.id">
+        <h4 v-for="ag of usedAsignaturas" :key="ag.id">
+           <NuxtLink :to="`/asignatura/${ag.id}`">
             <div class="half">{{ ag.nameVLC }}</div>
             <div class="half">
-                {{ matriculaStore.byAsignaturaId(ag.id)?.length }} alumnos
+                {{ $matriculas.byAsignaturaId(ag.id)?.length }} alumnos
             </div>
+           </NuxtLink>
         </h4>
     </div>
 </template>
@@ -12,8 +14,21 @@
 <script setup>
 import { useAsignaturaStore } from '~~/stores/asignaturas'
 import { useMatriculaStore } from '~~/stores/matriculas'
-const asignaturaStore = useAsignaturaStore()
-const matriculaStore = useMatriculaStore()
+
+const $asignaturas = useAsignaturaStore()
+const $matriculas = useMatriculaStore()
+
+const usedAsignaturasIds = computed(
+    () => Array.from(new Set(
+        $matriculas.matriculas.map(m => m.AsignaturaId)
+    ))
+)
+
+const  usedAsignaturas = computed(
+    () => $asignaturas.asignaturas.filter(
+        ({ id }) => usedAsignaturasIds.value.includes(id)
+    )
+)
 </script>
 
 <style scoped>
