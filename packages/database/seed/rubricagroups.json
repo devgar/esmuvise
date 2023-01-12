@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "LENGUAJE_MUSICAL"
+  },
+  {
+    "id": 2,
+    "name": "INTERPRETACIO_INSTRUMENTAL"
+  },
+  {
+    "id": 3,
+    "name": "CORDA"
+  },
+  {
+    "id": 4,
+    "name": "METALL"
+  },
+  {
+    "id": 5,
+    "name": "PERCUSSIÓ"
+  },
+  {
+    "id": 6,
+    "name": "PIANO"
+  },
+  {
+    "id": 7,
+    "name": "FUSTA"
+  }
+]
