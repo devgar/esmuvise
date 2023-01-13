@@ -20,7 +20,8 @@
 
 <script setup>
 import { useMatriculaStore } from '~~/stores/matriculas'
-import { useRubricaGroupStore } from '~~/stores/rubricaGroups';
+import { useRubricaGroupStore } from '~~/stores/rubricaGroups'
+import { useEvaluationItemStore } from '~~/stores/evaluationItems'
 
 import EvaluationField from './_EvaluationField'
 
@@ -33,4 +34,7 @@ const matricula = computed(() => $matriculas.matriculas.find(m => m.id === matri
 
 const $rubricaGroups = useRubricaGroupStore()
 const rubricaGroup = computed(() => $rubricaGroups.byId(matricula?.value?.Asignatura?.RubricaGroupId))
+
+const $evaluationItems = useEvaluationItemStore()
+
 </script>
