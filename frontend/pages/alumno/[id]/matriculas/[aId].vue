@@ -6,6 +6,7 @@
         </div>
         <div v-else>
             <h3>Evaluar {{ matricula?.Asignatura.nameVLC }}</h3>
+            <pre>{{ matriculaId?? 0 }} {{ matricula?.AlumnoId || "NULL" }} {{ matricula?.AsignaturaId || "NULL" }}</pre>
             <div class="evaluaciones">
                 <EvaluationField 
                     :alumno-id="matricula?.AlumnoId"
@@ -21,7 +22,6 @@
 <script setup>
 import { useMatriculaStore } from '~~/stores/matriculas'
 import { useRubricaGroupStore } from '~~/stores/rubricaGroups'
-import { useEvaluationItemStore } from '~~/stores/evaluationItems'
 
 import EvaluationField from './_EvaluationField'
 
@@ -35,6 +35,5 @@ const matricula = computed(() => $matriculas.matriculas.find(m => m.id === matri
 const $rubricaGroups = useRubricaGroupStore()
 const rubricaGroup = computed(() => $rubricaGroups.byId(matricula?.value?.Asignatura?.RubricaGroupId))
 
-const $evaluationItems = useEvaluationItemStore()
 
 </script>

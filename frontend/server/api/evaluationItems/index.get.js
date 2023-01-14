@@ -5,12 +5,12 @@ export default defineEventHandler((event) => {
     
     const where = {}
     
-    const AlumnoId = getQueryNum('AlumnoId')
-    if(AlumnoId) where.AlumnoId = AlumnoId
-    const RubricaId = getQueryNum('RubricaId')
+    const MatriculaId = getQueryNum(event, 'MatriculaId')
+    if(MatriculaId) where.MatriculaId = MatriculaId
+    const RubricaId = getQueryNum(event, 'RubricaId')
     if(RubricaId) where.RubricaId = RubricaId
-    const AsignaturaId = getQueryNum('AsignaturaId')
-    if(AsignaturaId) where.AsignaturaId = AsignaturaId
+    // const StudentEvaluationId = getQueryNum(event, 'StudentEvaluationId')
+    // if(StudentEvaluationId) where.StudentEvaluationId = StudentEvaluationId
 
     return EvaluationItem.findAll({ where })
 })
