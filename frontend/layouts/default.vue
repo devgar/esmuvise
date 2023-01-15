@@ -1,9 +1,13 @@
 <template>
-    <TheHeader />
-    <NuxtPage />
+    <v-app>
+        <v-app-bar title="EsMuViSe"></v-app-bar>
+
+        <v-navigation-drawer>...</v-navigation-drawer>
+
+        <v-main><NuxtPage /></v-main>
+    </v-app>
 </template>
 
-// layouts/default.vue
 <script setup lang="ts">
 import { useAlumnoStore } from '~~/stores/alumnos'
 import { useMatriculaStore } from '~~/stores/matriculas'
