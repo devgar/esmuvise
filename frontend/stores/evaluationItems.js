@@ -4,7 +4,7 @@ export const useEvaluationItemStore = defineStore('evaluationItem', {
         byKeys(store) {
             return (args) => store.evaluationItems.filter(equality(args))
         } 
-    } ,
+    },
     actions: {
         async fetch() {
             const result = await $fetch('/api/evaluationItems')
@@ -13,12 +13,19 @@ export const useEvaluationItemStore = defineStore('evaluationItem', {
         async post(payload) {
             const data = await $fetch('/api/evaluationItems', {
                 method: 'POST',
-                body: payload
+                body: payload,
             })
-
-            console.log({ data })
             if (data) await this.fetch()
             return data
-        }
+        },
+        async patch(payload) {
+            const { id, ...body } = payload
+            const data = await $fetch(`/api/evaluationItems/${id}`, {
+                method: 'PATCH',
+                body,
+            })
+            if (data) await this.fetch()
+            return data
+        },
     }
 })

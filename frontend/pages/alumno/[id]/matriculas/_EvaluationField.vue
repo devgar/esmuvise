@@ -1,9 +1,8 @@
 <template>
     <div>
-        <div>{{ evaluationItem || 'Pendant' }}</div>
         <h4>{{ rubrica?.concept }}</h4>
         <form @submit="onSubmit">
-            <select v-model="selection">
+            <select v-model="selected">
                 <option v-for="option in options" :value="option.id">
                     {{ option.name }}
                 </option>
@@ -30,35 +29,43 @@ const $rubricas = useRubricaStore()
 const rubrica = computed(() => $rubricas.rubricas.find(r => r.id === props.rubricaId))
 
 const options = [
-    { id: 'vFail', name: 'suspenso' },
-    { id: 'vLow', name: 'aprobado' },
-    { id: 'vMid', name: 'bien' },
-    { id: 'vHigh', name: 'sobresaliente'},
+    { id: 'vFail', name: 'suspenso', value: 490 },
+    { id: 'vLow', name: 'aprobado', value: 500 },
+    { id: 'vMid', name: 'bien', value: 700 },
+    { id: 'vHigh', name: 'sobresaliente', value: 900 },
 ]
 
-const selection = ref('')
+const selected = ref('')
 const text = ref('')
 const placeholder = ref('Selecciona una opció')
 
-watch(selection, () => {
-    text.value = rubrica?.value[selection.value]
+watch(selected, () => {
+    text.value = rubrica?.value[selected.value]
 })
 
 const $evaluationItems = useEvaluationItemStore()
 $evaluationItems.fetch()
 const evaluationItem = computed(()=> {
     const { matriculaId, rubricaId } = props
-    console.log("In store using:", { matriculaId, rubricaId })
     return $evaluationItems.byKeys({ MatriculaId: matriculaId, RubricaId: rubricaId })[0]
 })
 
 const onSubmit = async(event) => {
     event.preventDefault()
-    if (!selection.value) return
-    $evaluationItems.post({
-        value: 9, // TODO: unharcode this
-        body: text.value,
-       ...capitalizekeys(props)
-    })
+    if (!selected.value) return null
+    if (!evaluationItem.value) {
+        $evaluationItems.post({
+            value: options.find(o => o.id === selected?.value).value,
+            body: text.value,
+            ...capitalizekeys(props)
+        })
+    }
+    else {
+        $evaluationItems.patch({
+            id: evaluationItem.value.id,
+            value: options.find(o => o.id === selected?.value).value,
+            body: text.value,
+        })
+    }
 }
 </script>

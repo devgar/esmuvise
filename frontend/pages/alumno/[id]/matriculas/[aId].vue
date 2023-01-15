@@ -1,12 +1,11 @@
 <template>
     <div>
         <div v-if="!rubricaGroup">
-            <h3>Evaluar {{ matricula?.Asignatura.nameVLC }}</h3>
+            <h3>{{ matricula?.Asignatura.nameVLC }}</h3>
             <p>No evaluable</p>
         </div>
         <div v-else>
             <h3>Evaluar {{ matricula?.Asignatura.nameVLC }}</h3>
-            <pre>{{ matriculaId?? 0 }} {{ matricula?.AlumnoId || "NULL" }} {{ matricula?.AsignaturaId || "NULL" }}</pre>
             <div class="evaluaciones">
                 <EvaluationField 
                     :alumno-id="matricula?.AlumnoId"
