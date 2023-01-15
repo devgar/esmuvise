@@ -4,7 +4,7 @@ export default defineEventHandler(async (event) => {
     const body = await readBody(event)
     try {
         return await EvaluationItem.create(body)
-    } catch(error) {
+    } catch (error) {
         if (error.name === 'SequelizeUniqueConstraintError')
             error = createError({
                 ...error,

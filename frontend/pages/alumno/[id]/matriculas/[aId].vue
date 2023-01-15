@@ -8,10 +8,12 @@
             <h3>Evaluar {{ matricula?.Asignatura.nameVLC }}</h3>
             <div class="evaluaciones">
                 <EvaluationField 
+                    v-for="rubrica of rubricaGroup.Rubricas"
+                    :key="rubrica.id"
                     :alumno-id="matricula?.AlumnoId"
                     :asignatura-id="matricula?.AsignaturaId"
                     :matricula-id="matricula?.id"
-                    :rubrica-id="1"
+                    :rubrica-id="rubrica.id"
                 />
             </div>
         </div>
