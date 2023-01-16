@@ -1,8 +1,11 @@
 <template>
     <v-app>
-        <v-app-bar title="EsMuViSe"></v-app-bar>
+        <v-app-bar title="EsMuViSe">
+            <v-btn to="/alumnos">Alumnos</v-btn>
+            <v-btn to="/asignaturas">Asignaturas</v-btn>
+        </v-app-bar>
 
-        <v-navigation-drawer>...</v-navigation-drawer>
+        <!--<v-navigation-drawer>...</v-navigation-drawer>-->
 
         <v-main><NuxtPage /></v-main>
     </v-app>

@@ -1,14 +1,24 @@
 <template>
-    <div>
-        <h4 v-for="ag of usedAsignaturas" :key="ag.id">
-           <NuxtLink :to="`/asignatura/${ag.id}`">
-            <div class="half">{{ ag.nameVLC }}</div>
-            <div class="half">
-                {{ $matriculas.byAsignaturaId(ag.id)?.length }} alumnos
-            </div>
-           </NuxtLink>
-        </h4>
-    </div>
+    <v-table class="h-auto" density="compact" fixed-header height="calc(100vh - 64px)" hover>
+        <thead>
+            <tr>
+                <th>Asignatura</th>
+                <th>Nº Matricules</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item of usedAsignaturas" :key="item.id">
+                <td class="v-col-2">
+                    <v-btn class="text-left" block :to="`/asignatura/${item.id}`" variant="text">
+                        {{ item.nameVLC }}
+                    </v-btn>
+                </td>
+                <td class="v-col-auto">
+                    {{ $matriculas.byAsignaturaId(item.id)?.length }} alumnos
+                </td>
+            </tr>
+        </tbody>
+    </v-table>
 </template>
 
 <script setup>
@@ -30,17 +40,3 @@ const  usedAsignaturas = computed(
     )
 )
 </script>
-
-<style scoped>
-div {
-    padding: 0.8rem 0;
-}
-h4 {
-    margin: 0.4rem 0;
-}
-h4 div {
-    padding: 0;
-    width:50%;
-    display: inline-block;
-}
-</style>

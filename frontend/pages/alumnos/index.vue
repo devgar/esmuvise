@@ -2,12 +2,8 @@
     <v-table class="h-auto" density="compact" fixed-header height="calc(100vh - 64px)" hover>
         <thead>
             <tr>
-                <th class="text-left">
-                    Nom
-                </th>
-                <th class="text-left">
-                    Asignatures
-                </th>
+                <th class="text-left">Nom</th>
+                <th class="text-left">Asignatures</th>
             </tr>
         </thead>
         <tbody>
@@ -26,12 +22,6 @@
 <script setup>
 import { useAlumnoStore } from '~~/stores/alumnos'
 import Matriculas from './_matriculas.vue'
-
-const router = useRouter()
-
-const goTo = (event) => 
-    console.log(event)
-    // router.push(`/alumno/${id}`)
 
 const $alumnos = useAlumnoStore()
 </script>

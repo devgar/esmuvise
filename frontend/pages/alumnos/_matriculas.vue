@@ -3,7 +3,7 @@
     <div v-else class="asignaturas">
         <v-btn v-for="{ id, Asignatura } in asignaturas" :key="id"
             v-text="Asignatura.nameVLC" router nuxt-link
-            :to="`/asignatura/${Asignatura.id}`"
+            :to="`/alumno/${props.alumnoId}/matriculas/${id}`"
             size="x-small" variant="outlined"
         />
     </div>
