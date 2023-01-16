@@ -10,20 +10,3 @@
         </div>
     </header>
 </template>
-
-<style>
-header {
-    background: #EEE;
-    margin: -8px;
-}
-.header-in {
-    padding: 8px;
-}
-.no-bottom-padding {
-    padding-bottom: 0;
-}
-.sticky {
-    position: sticky;
-    top: 0;
-}
-</style>

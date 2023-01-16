@@ -1,42 +1,30 @@
 <template>
-    <div class="alumnos-list">
-        <h4 v-for="al of alumnoStore.alumnos" :key="al.id">
-            <div class="half">
-                <NuxtLink :to="`/alumno/${al.id}`">
-                    {{ al.lastName }}, {{ al.firstName }}
-                </NuxtLink>
-            </div>
-            <div class="half">
-                <Matriculas :alumno-id="al.id" />
-            </div>
-        </h4>
-    </div>
+    <v-table class="h-auto" density="compact" fixed-header height="calc(100vh - 64px)" hover>
+        <thead>
+            <tr>
+                <th class="text-center"><b>Nom</b></th>
+                <th class="text-left"><b>Asignatures</b></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item in $alumnos.alumnos" :key="item.id" @click="goTo">
+                <td class="v-col-3">
+                    <v-btn class="text-left" block :to="`/alumno/${item.id}`" variant="text">{{ item.lastName }}, <b>{{ item.firstName }}</b></v-btn>
+                </td>
+                <td class="v-col-auto">
+                    <Matriculas :alumno-id="item.id" />
+                </td>
+            </tr>
+        </tbody>
+    </v-table>
 </template>
 
 <script setup>
 import { useAlumnoStore } from '~~/stores/alumnos'
 import Matriculas from './_matriculas.vue'
 
-const alumnoStore = useAlumnoStore()
+const $alumnos = useAlumnoStore()
 </script>
 
 <style scoped>
-.alumnos-list {
-    padding: 0.8rem 0;
-}
-
-h4 {
-    margin: 0.4rem 0;
-    display: flex;
-}
-
-h4:nth-child(2n) {
-    background: #f5e5e0;
-}
-h4 div.half {
-    padding: 0;
-    width:50%;
-    display: inline-block;
-    flex-grow: 1;
-}
 </style>

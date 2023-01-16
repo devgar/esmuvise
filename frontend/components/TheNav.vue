@@ -23,20 +23,3 @@ const popLink = () => {
     navStore.pop()
 }
 </script>
-
-<style scoped>
-nav {
-    display: flex;
-}
-ul {
-    margin: 0; 
-    padding: 0 0 0.1rem;
-    display: flex;
-    list-style-type: none;
-    position: relative;
-}
-
-ul li {
-    margin: 0 0.2rem;
-}
-</style>

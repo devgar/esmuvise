@@ -14,7 +14,6 @@ const props = defineProps({
 })
 
 const go = computed(() => props.to === route.fullPath ? '' : props.to)
-const handler = () => props.to === route.fullPath && console.log('END')
 </script>
 
 <style scoped>

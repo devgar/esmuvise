@@ -1,18 +1,34 @@
 <template>
-    <div>
-        <h2 v-if="!alumno">...</h2>
-        <div v-else>
-            <h2>{{ alumno.lastName }}, {{ alumno.firstName }}</h2>
-            <pre v-if="route.name === 'alumno-id'">{{ alumno }}</pre>
-            <div v-else><RouterLink :to="`/alumno/${alumnoId}`">[...]</RouterLink></div>
-            <ul>
-                <li v-for="{id, Asignatura} of asignaturas" :key="id">
-                    <RouterLink :to="`/alumno/${alumnoId}/matriculas/${id}`" >{{ Asignatura.nameVLC }}</RouterLink>
-                </li>
-            </ul>
-            <NuxtPage :foobar="123" />
-        </div>
-    </div>
+    <v-card v-if="alumno" class="mx-2 my-4" max-width="800" prepend-icon="mdi-account"
+        :title="`${alumno.lastName} ${alumno.firstName}`">
+        <template v-slot:prepend>
+            <v-icon size="x-large"></v-icon>
+        </template>
+
+        <template v-slot:append>
+            <v-btn v-if="route.name !== 'alumno-id'" :to="`/alumno/${alumnoId}`" variant="outlined" icon>
+                <v-icon size="x-large">mdi-format-list-bulleted-square</v-icon>
+            </v-btn>
+        </template>
+
+        <v-list class="my-4 mx-auto bg-transparent" v-if="route.name === 'alumno-id'">
+            <v-list-item title="Telefon" prepend-icon="mdi-phone" :subtitle="alumno.telephone" />
+            <v-list-item title="Direccio" prepend-icon="mdi-map" :subtitle="alumno.domicilio" />
+            <v-list-item :subtitle="`${ alumno.codPostal } · ${ alumno.localidad }`" />
+        </v-list>
+    </v-card>
+
+    <v-card v-if="asignaturas.length" class="mx-8 my-4" max-width="600">
+        <v-list class="bg-transparent">
+            <v-list-item v-for="matricula of asignaturas" :key="matricula.id" 
+                :title="matricula.Asignatura.nameVLC" 
+                :subtitle="`${matricula.curso} - ${matricula.ano}/${matricula.ano + 1}`"
+                :to="`/alumno/${alumnoId}/matriculas/${matricula.id}`"
+            />
+        </v-list>
+    </v-card>
+
+    <NuxtPage :foobar="123" />
 </template>
 
 <script setup>
