@@ -36,14 +36,14 @@
                 </v-col>
 
                 <v-col cols="2">
-                    <v-row justify="end">
-                        <v-container justify="end">
+                    <v-container justify="end">
+                        <v-row justify="end">
                             <v-btn-toggle>
                                 <!--<v-btn icon="mdi-undo" :disabled="!evaluationItem || !hasChanges" />-->
                                 <v-btn icon="mdi-content-save" @click=submit class="ml-2" :disabled="!hasChanges" />
                             </v-btn-toggle>
-                        </v-container>
-                    </v-row>
+                        </v-row>
+                    </v-container>
                 </v-col>
             </v-row>
             <v-row>
@@ -106,7 +106,6 @@ watch(value, () => {
 })
 
 watch(selected, () => {
-    if (evaluationItem.value) return
     text.value = rubrica?.value[selected.value]
 })
 

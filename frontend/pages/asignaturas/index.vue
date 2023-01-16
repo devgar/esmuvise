@@ -2,7 +2,7 @@
     <v-table class="h-auto" density="compact" fixed-header height="calc(100vh - 64px)" hover>
         <thead>
             <tr>
-                <th>Asignatura</th>
+                <th class="text-center">Asignatura</th>
                 <th>Nº Matricules</th>
             </tr>
         </thead>

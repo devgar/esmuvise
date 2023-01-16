@@ -2,13 +2,13 @@
     <v-table class="h-auto" density="compact" fixed-header height="calc(100vh - 64px)" hover>
         <thead>
             <tr>
-                <th class="text-left">Nom</th>
-                <th class="text-left">Asignatures</th>
+                <th class="text-center"><b>Nom</b></th>
+                <th class="text-left"><b>Asignatures</b></th>
             </tr>
         </thead>
         <tbody>
             <tr v-for="item in $alumnos.alumnos" :key="item.id" @click="goTo">
-                <td class="v-col-2">
+                <td class="v-col-3">
                     <v-btn class="text-left" block :to="`/alumno/${item.id}`" variant="text">{{ item.lastName }}, <b>{{ item.firstName }}</b></v-btn>
                 </td>
                 <td class="v-col-auto">
