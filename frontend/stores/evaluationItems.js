@@ -30,5 +30,5 @@ export const useEvaluationItemStore = defineStore('evaluationItem', {
             if (data) await this.fetch()
             return data
         },
-    }
+    },
 })

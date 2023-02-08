@@ -8,20 +8,16 @@
 
 <script setup>
 // import { useAlumnoStore } from '~~/stores/alumnos'
-import { useAsignaturaStore } from '~~/stores/asignaturas';
 import { useEvaluationItemStore } from '~~/stores/evaluationItems'
 import { useMatriculaStore } from '~~/stores/matriculas'
-import { useRubricaGroupStore } from '~~/stores/rubricaGroups'
-import { useRubricaStore } from '~~/stores/rubricas'
+import { useNumRubricasByMat } from '~~/stores/numRubricasByMat'
 
 const props = defineProps({ alumnoId: Number })
 
 const $evaluationItems = useEvaluationItemStore()
 
 const $matriculas = useMatriculaStore()
-const $rubricaGroups = useRubricaGroupStore()
-const $rubricas = useRubricaStore()
-const $asignaturas = useAsignaturaStore()
+const $numRubricasByMat = useNumRubricasByMat()
 
 const printableHref = computed(() =>
     `/print/${props.alumnoId}`
@@ -29,25 +25,6 @@ const printableHref = computed(() =>
 
 const evaluateHref = computed(() =>
     `/alumno/${props.alumnoId}`
-)
-
-const numRubricasByGroup = computed(() => 
-    $rubricaGroups.rubricaGroups.map(({ id }) => 
-        ({ 
-            id, 
-            num: $rubricas.rubricas.filter(r => r.RubricaGroupId === id ).length,
-        })
-    )
-)
-
-const numRubricasByAsignaturas = computed(() => 
-    $asignaturas.asignaturas.filter(a => a.RubricaGroupId)
-        .map(({ id, RubricaGroupId }) => 
-            ({
-                id,
-                num: numRubricasByGroup.value.find(rg => rg.id === RubricaGroupId)?.num,
-            })    
-        )
 )
 
 const evaluatedNum = computed(() => $evaluationItems.byAlumnoId(props.alumnoId).length)
