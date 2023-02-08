@@ -3,7 +3,10 @@ export const useEvaluationItemStore = defineStore('evaluationItem', {
     getters: {
         byKeys(store) {
             return (args) => store.evaluationItems.filter(equality(args))
-        } 
+        },
+        byAlumnoId(store) {
+            return (AlumnoId) => store.evaluationItems.filter(ei => ei.AlumnoId === AlumnoId)
+        }
     },
     actions: {
         async fetch() {
