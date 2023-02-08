@@ -31,7 +31,7 @@ const evaluatedNum = computed(() => $evaluationItems.byAlumnoId(props.alumnoId).
 
 const evaluatableNum = computed(() => 
     $matriculas.byAlumnoId(props.alumnoId)
-        .map(mat => numRubricasByAsignaturas.value.find(a => a.id === mat.AsignaturaId))
+        .map(mat => $numRubricasByMat.nums.find(a => a.id === mat.AsignaturaId))
         .filter(n => !!n)
         .map(n => n.num)
         .reduce((a, b) => a + b, 0)
