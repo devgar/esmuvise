@@ -1,10 +1,12 @@
 <template>
     <v-app>
-        <v-app-bar title="EsMuViSe">
-            <v-btn to="/alumnos">Alumnos</v-btn>
-            <v-btn to="/asignaturas">Asignaturas</v-btn>
-        </v-app-bar>
-
+        <div class="no-print">
+            <v-app-bar title="EsMuViSe">
+                <v-btn to="/alumnos">Alumnos</v-btn>
+                <v-btn to="/asignaturas">Asignaturas</v-btn>
+            </v-app-bar>
+        </div>
+        
         <!--<v-navigation-drawer>...</v-navigation-drawer>-->
 
         <v-main><NuxtPage /></v-main>
@@ -26,3 +28,15 @@ useRubricaGroupStore().fetch()
 useRubricaStore().fetch()
 useEvaluationItemStore().fetch()
 </script>
+
+<style>
+@media print {
+    .no-print {
+        display: none;
+    }
+
+    main {
+        padding-top: 16px !important;
+    }
+}
+</style>
