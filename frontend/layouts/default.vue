@@ -30,13 +30,20 @@ useEvaluationItemStore().fetch()
 </script>
 
 <style>
+body {
+    position: relative;
+}
+
 @media print {
+    body {
+        position: relative;
+    }
     .no-print {
         display: none;
     }
 
     main {
-        padding-top: 16px !important;
+        padding-top: 0 !important;
     }
 }
 </style>
