@@ -3,7 +3,7 @@
         v-if="numRubricas"
         class="printable__asignatura"
     >
-        <h4>{{ asignatura?.nameVLC }}</h4>
+        <h4>{{ asignatura?.nameVLC }} <span>curs:</span>{{ matricula.curso }}</h4>
         <table>
             <EvaluationItem
                 v-for="rubrica of rubricas" :key="rubrica.id" 
@@ -62,5 +62,9 @@ const rubricas = computed(() => {
     /* text-align: center; */
     padding-left: 1rem;
     border-bottom: 2px solid black;
-} 
+}
+
+h4 > span {
+    font-weight: normal;
+}
 </style>
