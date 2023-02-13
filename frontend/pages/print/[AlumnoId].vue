@@ -30,6 +30,8 @@
                     <v-icon icon="mdi-check-bold" size="x-small" />:Aconseguit
                     <v-icon icon="mdi-star" size="x-small" />:Excel·lent
                 </td>
+            </tr>
+            <tr>
                 <td v-for="ei in evaluationItems">
                     <v-icon :icon="icon(ei.value)" size="x-small"></v-icon>
                 </td>
