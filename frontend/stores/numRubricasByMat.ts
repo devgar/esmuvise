@@ -21,16 +21,17 @@ export const useNumRubricasByMat = defineStore('numRubricasByMat', () => {
             .map(({ id, RubricaGroupId }) => 
                 ({
                     id,
-                    num: numRubricasByGroup.value.find(rg => rg.id === RubricaGroupId)?.num,
+                    num: numRubricasByGroup.value.find(rg => rg.id === RubricaGroupId)?.num || 0,
                 })    
-            )
+            ).filter(n => n.num)
     )
 
-    function byAsignaturaId (AsignaturaId) {
-        return numRubricasByAsignaturas.value.filter(equality({ AsignaturaId }))
+    function byAsignaturaId (id: number) {
+        return numRubricasByAsignaturas.value.find(equality({ id }))
     }
 
     return {
-        nums: numRubricasByAsignaturas
+        nums: numRubricasByAsignaturas, 
+        byAsignaturaId
     }
 })
