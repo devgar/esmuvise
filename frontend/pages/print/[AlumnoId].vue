@@ -3,7 +3,7 @@
         <thead>
             <tr><td class="mflex">
                 <b>Escola De Música Vicent Serrano</b>
-                <span class="mgrow">1ª Avaluació</span> 
+                <span class="mgrow">1ª Avaluació 2022/23</span> 
                 <b>{{ fullName }}</b> 
             </td></tr>
         </thead>
@@ -24,6 +24,12 @@
         <div class="lastfooter__fullname">{{ fullName }}</div>
         <table>
             <tr>
+                <td>
+                    <b>Llegenda:</b>
+                    <v-icon icon="mdi-timer-sand" size="x-small" />:En procés
+                    <v-icon icon="mdi-check-bold" size="x-small" />:Aconseguit
+                    <v-icon icon="mdi-star" size="x-small" />:Excel·lent
+                </td>
                 <td v-for="ei in evaluationItems">
                     <v-icon :icon="icon(ei.value)" size="x-small"></v-icon>
                 </td>
