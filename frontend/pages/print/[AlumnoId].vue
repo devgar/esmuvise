@@ -31,11 +31,6 @@
                     <v-icon icon="mdi-star" size="x-small" />:Excel·lent
                 </td>
             </tr>
-            <tr>
-                <td v-for="ei in evaluationItems">
-                    <v-icon :icon="icon(ei.value)" size="x-small"></v-icon>
-                </td>
-            </tr>
         </table>
         <p class="lastfooter__sign">
             Signatura pare/mare/tutor
