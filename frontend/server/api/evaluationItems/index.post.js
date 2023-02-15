@@ -13,5 +13,4 @@ export default defineEventHandler(async (event) => {
             })
         return sendError(event, error, false)
     }
-    return null
 })
