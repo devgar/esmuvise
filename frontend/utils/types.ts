@@ -1,20 +1,7 @@
 interface db {
-    id?: number,
-    createdAt?: Date,
-    updatedAt?: Date,
-}
-
-export interface Rubrica  extends db{
-    concept: string,
-    vHigh: string,
-    vMid: string,
-    vLow: string,
-    vFail: string,
-    RubricaGroupId: number,
-}
-
-export interface RubricaGroup  extends db{
-    name: string,
+    id: number,
+    createdAt: Date,
+    updatedAt: Date,
 }
 
 export interface Alumno  extends db{
@@ -33,11 +20,10 @@ export interface Asignatura  extends db{
     RubricaGroupId: number,
 }
 
-export interface Matricula extends db {
-    ano: number,
-    curso: number,
-    AlumnoId: number,
-    AsignaturaId: number,
+export interface Equivalence extends db {
+    max: number,
+    icon?: string,
+    label?: string,
 }
 
 export interface EvaluationItem extends db {
@@ -48,3 +34,32 @@ export interface EvaluationItem extends db {
     MatriculaId: number,
     RubricaId: number,
 }
+
+export interface Matricula extends db {
+    ano: number,
+    curso: number,
+    AlumnoId: number,
+    AsignaturaId: number,
+}
+
+export interface Rubrica  extends db{
+    concept: string,
+    vHigh: string,
+    vMid: string,
+    vLow: string,
+    vFail: string,
+    RubricaGroupId: number,
+}
+
+export interface RubricaGroup  extends db{
+    name: string,
+}
+
+export type DB<T> = T & {
+    id: number, createdAt: Date, updatedAt: Date,
+}
+
+export type UnDB<T> = Omit<T, 'id'|'createdAt'|'updatedAt'>
+
+
+

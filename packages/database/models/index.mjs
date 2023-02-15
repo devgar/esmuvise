@@ -9,6 +9,7 @@ const sequelize = new Sequelize(config.development)
 
 import modelAlumno from './alumno.js'
 import modelAsignatura from './asignatura.js'
+import modelEquivalence from './equivalence.js'
 import modelEvaluationItem from './evaluationItem.js'
 import modelMatricula from './matricula.js'
 import modelRubrica from './rubrica.js'
@@ -22,6 +23,7 @@ const loadModel = (m) => {
 const dbEntries = [
   loadModel(modelAlumno),
   loadModel(modelAsignatura),
+  loadModel(modelEquivalence),
   loadModel(modelEvaluationItem),
   loadModel(modelMatricula),
   loadModel(modelRubrica),
@@ -42,6 +44,7 @@ db.Sequelize = Sequelize
 export default db
 export const Alumno = db.Alumno
 export const Asignatura = db.Asignatura
+export const Equivalence = db.Equivalence
 export const EvaluationItem = db.EvaluationItem
 export const Matricula = db.Matricula
 export const Rubrica = db.Rubrica
