@@ -21,17 +21,17 @@
         </tbody>
     </table>
     <footer class="lastfooter">
-        <div class="lastfooter__fullname">{{ fullName }}</div>
-        <table>
+        <table v-if="!$equivalences.textMode">
             <tr>
                 <td>
                     <b>Llegenda:</b>
-                    <v-icon icon="mdi-timer-sand" size="x-small" />:En procés
-                    <v-icon icon="mdi-check-bold" size="x-small" />:Aconseguit
+                    <v-icon icon="mdi-timer-sand" size="x-small" />:Insuficient
+                    <v-icon icon="mdi-check-bold" size="x-small" />:Bé
                     <v-icon icon="mdi-star" size="x-small" />:Excel·lent
                 </td>
             </tr>
         </table>
+        <div class="lastfooter__fullname">{{ fullName }}</div>
         <p class="lastfooter__sign">
             Signatura pare/mare/tutor
         </p>
@@ -42,11 +42,14 @@
 import { useAlumnoStore } from '~~/stores/alumnos'
 import { useEvaluationItemStore } from '~~/stores/evaluationItems';
 import { useMatriculaStore } from '~~/stores/matriculas'
+import { useEquivalenceStore } from '~~/stores/equivalences';
 import Asignatura from './_asignatura.vue'
 
 const $alumnos = useAlumnoStore()
 const $matriculas = useMatriculaStore()
 const $evaluationItems = useEvaluationItemStore()
+
+const $equivalences = useEquivalenceStore()
 
 const route = useRoute()
 
