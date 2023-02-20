@@ -38,13 +38,10 @@
 <script setup>
 import { useAlumnoStore } from '~~/stores/alumnos'
 import { useMatriculaStore } from '~~/stores/matriculas'
-import { useEquivalenceStore } from '~~/stores/equivalences'
 import Asignatura from './_asignatura.vue'
 
 const $alumnos = useAlumnoStore()
 const $matriculas = useMatriculaStore()
-
-const $equivalences = useEquivalenceStore()
 
 const route = useRoute()
 

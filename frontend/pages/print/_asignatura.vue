@@ -50,7 +50,7 @@ const curso = (num: number) => {
     if (num === 0 ){
         return 'preparatori'
     }
-    if (num === 6){
+    if (num >= 6){
         return 'preescolar'
     }
     return num
