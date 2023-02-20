@@ -62,10 +62,19 @@ const rubricas = computed(() => {
 
 const curso = (num: number) => { 
     if (num === 0 ){
+        return 'iniciació musical'
+    }
+    if (num === 6){
+        return '4 anys'
+    }
+    if (num === 7){
+        return '5 anys'
+    }
+    if (num === 8){
         return 'preparatori'
     }
-    if (num >= 6){
-        return 'preescolar'
+    if (num === 9){
+        return 'llenguatge adults'
     }
     return `${num} curs`
 }
