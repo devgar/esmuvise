@@ -3,7 +3,7 @@
         v-if="numRubricas"
         class="printable__asignatura"
     >
-        <h4>{{ asignatura?.nameVLC }} <span>curs:</span>{{ matricula.curso }}</h4>
+        <h4>{{ asignatura?.nameVLC }} <span>curs:</span>{{ curso(matricula.curso) }}</h4>
         <table>
             <EvaluationItem
                 v-for="rubrica of rubricas" :key="rubrica.id" 
@@ -45,6 +45,17 @@ const rubricas = computed(() => {
     const rubricaGroup = $rubricaGroups.byId(asignatura.value?.RubricaGroupId)
     return $rubricas.rubricas.filter(r => r.RubricaGroupId === rubricaGroup?.id)
 })
+
+const curso = (num: number) => { 
+    if (num === 0 ){
+        return 'preparatori'
+    }
+    if (num === 6){
+        return 'preescolar'
+    }
+    return num
+}
+
 </script>
 
 <style scoped>

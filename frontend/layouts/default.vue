@@ -8,16 +8,14 @@
         </div>
         
         <v-navigation-drawer class="no-print">
-            <VCard>
+            <VCard v-if="route.name === 'print-AlumnoId'">
                 <VCardTitle>Iconos/Texto</VCardTitle>
                 <v-card-actions>
                     <v-switch :label="switchText" v-model="textMode"></v-switch>
                 </v-card-actions>
-            </VCard>
-            <VCard>
                 <VCardTitle>Imprimir</VCardTitle>
                 <VCardActions>
-                    <VBtn @click="print" label="imprimir">PRINT</VBtn>
+                    <VBtn @click="print" block label="imprimir">PRINT</VBtn>
                 </VCardActions>
             </VCard>
         </v-navigation-drawer>
@@ -40,6 +38,9 @@ const { textMode } = storeToRefs($equivalences)
 const print = () => window.print()
 
 const switchText = computed(() => textMode.value ? 'texto' : 'iconos')
+
+const route = useRoute();
+
 </script>
 
 <style>

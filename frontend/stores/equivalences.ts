@@ -15,7 +15,7 @@ export const useEquivalenceStore = defineStore('equivalence', () => {
         id: 5, max: 1001, icon: 'mdi-star', label: 'excel·lent',
     }])
 
-    const textMode = ref<boolean>(false)
+    const textMode = ref<boolean>(true)
 
     const switchText = computed(() => textMode.value ? 'texto' : 'icons')
 
