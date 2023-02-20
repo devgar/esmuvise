@@ -40,14 +40,12 @@
 
 <script setup>
 import { useAlumnoStore } from '~~/stores/alumnos'
-import { useEvaluationItemStore } from '~~/stores/evaluationItems';
 import { useMatriculaStore } from '~~/stores/matriculas'
-import { useEquivalenceStore } from '~~/stores/equivalences';
+import { useEquivalenceStore } from '~~/stores/equivalences'
 import Asignatura from './_asignatura.vue'
 
 const $alumnos = useAlumnoStore()
 const $matriculas = useMatriculaStore()
-const $evaluationItems = useEvaluationItemStore()
 
 const $equivalences = useEquivalenceStore()
 
@@ -60,8 +58,6 @@ const alumno = computed(() => $alumnos.byId(AlumnoId.value))
 const fullName = computed(() => alumno.value && [alumno.value.firstName, alumno.value.lastName].join(" "))
 
 const matriculas = computed(() => $matriculas.byAlumnoId(AlumnoId.value))
-
-const evaluationItems = computed(() => $evaluationItems.evaluationItems.filter(e => e.AlumnoId === AlumnoId.value))
 
 const icon = (value) => {
     value |= 0

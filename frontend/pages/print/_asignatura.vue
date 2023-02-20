@@ -3,7 +3,7 @@
         v-if="numRubricas"
         class="printable__asignatura"
     >
-        <h4>{{ asignatura?.nameVLC }} <span>curs:</span>{{ curso(matricula.curso) }}</h4>
+        <h4>{{ asignatura?.nameVLC }} <span>curs:</span> {{ curso(matricula.curso) }}</h4>
         <table>
             <EvaluationItem
                 v-for="rubrica of rubricas" :key="rubrica.id" 
@@ -18,12 +18,12 @@
 <script setup lang="ts">
 import type { Matricula } from '~~/utils/types'
 
-import { useAsignaturaStore } from '~~/stores/asignaturas';
-import { useRubricaGroupStore } from '~~/stores/rubricaGroups';
-import { useRubricaStore } from '~~/stores/rubricas';
-import { useNumRubricasByMat } from '~~/stores/numRubricasByMat';
+import { useAsignaturaStore } from '~~/stores/asignaturas'
+import { useRubricaGroupStore } from '~~/stores/rubricaGroups'
+import { useRubricaStore } from '~~/stores/rubricas'
+import { useNumRubricasByMat } from '~~/stores/numRubricasByMat'
 
-import EvaluationItem from './_evaluationItem.vue';
+import EvaluationItem from './_evaluationItem.vue'
 
 const props = defineProps<{ matricula: Matricula }>()
 

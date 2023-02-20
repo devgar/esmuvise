@@ -4,8 +4,8 @@
             <v-icon :icon="$equivalence.repr(evaluationItem?.value || 0)" size="x-small"></v-icon>
         </td>
         <td class="printable__evaluationItemConceptCell">
-            <b class="printable__evaluationItemConcept--low">{{ props.concept }}</b> 
-            <i v-if="$equivalence.textMode">{{ $equivalence.repr(evaluationItem?.value || 0) }}</i>
+            <span class="printable__evaluationItemConcept--low">{{ props.concept }}:</span> 
+            <b v-if="$equivalence.textMode">{{ $equivalence.repr(evaluationItem?.value || 0) }}</b>
             {{ evaluationItem?.body }}
         </td>
     </tr>
@@ -43,7 +43,6 @@ const icon = computed(() => {
     vertical-align: text-top;
 }
 .printable__evaluationItemConcept--low {
-    font-size: 80%;
     text-decoration: underline;
     padding: 0 0.4rem;
 }

@@ -4,15 +4,15 @@ type UN <T> = Omit<T, 'createdAt'|'updatedAt'>
 
 export const useEquivalenceStore = defineStore('equivalence', () => {
     const equivalences = ref<UN<Equivalence>[]>([{
-        id: 1, max: 499, icon: 'mdi-timer-sand', label: 'insuficient',
+        id: 1, max: 499, icon: 'mdi-timer-sand', label: 'INSUFICIENT',
     }, {
-        id: 2, max: 599, label: 'suficient',
+        id: 2, max: 599, label: 'SUFICIENT',
     }, {
-        id: 3, max: 699, label: 'bé',
+        id: 3, max: 699, label: 'BÉ',
     }, {
-        id: 4, max: 899, icon: 'mdi-check-bold', label: 'notable',
+        id: 4, max: 899, icon: 'mdi-check-bold', label: 'NOTABLE',
     }, {
-        id: 5, max: 1001, icon: 'mdi-star', label: 'excel·lent',
+        id: 5, max: 1001, icon: 'mdi-star', label: 'EXCEL·LENT',
     }])
 
     const textMode = ref<boolean>(true)
