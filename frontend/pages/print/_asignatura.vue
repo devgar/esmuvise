@@ -3,7 +3,7 @@
         v-if="numRubricas"
         class="printable__asignatura"
     >
-        <h4>{{ asignatura?.nameVLC }} <span>curs:</span> {{ curso(matricula.curso) }}</h4>
+        <h4>{{ asignatura?.nameVLC }} <span class="grow">{{ itemsAverage }}</span> <span class="float normal">{{ curso(matricula.curso) }} </span></h4>
         <table>
             <EvaluationItem
                 v-for="rubrica of rubricas" :key="rubrica.id" 
@@ -22,6 +22,8 @@ import { useAsignaturaStore } from '~~/stores/asignaturas'
 import { useRubricaGroupStore } from '~~/stores/rubricaGroups'
 import { useRubricaStore } from '~~/stores/rubricas'
 import { useNumRubricasByMat } from '~~/stores/numRubricasByMat'
+import { useEvaluationItemStore } from '~~/stores/evaluationItems'
+import { useEquivalenceStore } from '~~/stores/equivalences'
 
 import EvaluationItem from './_evaluationItem.vue'
 
@@ -31,6 +33,15 @@ const $asignaturas = useAsignaturaStore()
 const $rubricaGroups = useRubricaGroupStore()
 const $rubricas = useRubricaStore()
 const $numRubricas = useNumRubricasByMat()
+const $evalutionItems = useEvaluationItemStore()
+const $equivalences = useEquivalenceStore()
+
+const itemsAverage = computed(()=> {
+    const searchKeys = (({ id:MatriculaId, AsignaturaId })=>({ MatriculaId, AsignaturaId }))(props.matricula)
+    const matches = $evalutionItems.byKeys(searchKeys)
+    const average = matches.reduce((acc, curr) => acc + curr.value, 0) / matches.length
+    return $equivalences.repr(average)
+})
 
 const asignatura = computed(() =>
     $asignaturas.byId(props.matricula?.AsignaturaId)
@@ -53,12 +64,16 @@ const curso = (num: number) => {
     if (num >= 6){
         return 'preescolar'
     }
-    return num
+    return `${num} curs`
 }
 
 </script>
 
 <style scoped>
+.grow {
+    flex-grow: 1;
+    margin: 0 0.6rem;
+}
 @media print {
     .printable__asignatura {
         page-break-inside: avoid; 
@@ -71,11 +86,12 @@ const curso = (num: number) => {
 
 .printable__asignatura h4 {
     /* text-align: center; */
+    display: flex;
     padding-left: 1rem;
     border-bottom: 2px solid black;
 }
 
-h4 > span {
+h4 > .normal {
     font-weight: normal;
 }
 </style>

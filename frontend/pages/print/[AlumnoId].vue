@@ -11,7 +11,7 @@
             <tr>
                 <td>
                     <h5 class="mflex mtop4"><i></i><div class="mgrow"></div>1ª Avaluació</h5>
-                    <h3 class="mbottom2">{{ fullName }}</h3>
+                    <h3 @click="copyCB" class="mbottom2">{{ fullName }}</h3>
                     <Asignatura
                         v-for="matricula in matriculas" key="matricula.id"
                         :matricula="matricula"
@@ -58,6 +58,10 @@ const icon = (value) => {
     if (value < 500) return 'mdi-timer-sand'
     if( value < 700) return 'mdi-check-bold'
     return 'mdi-star'
+}
+
+function copyCB(event) {
+    navigator.clipboard.writeText(fullName.value)
 }
 </script>
 
