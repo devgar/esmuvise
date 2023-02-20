@@ -2,7 +2,7 @@
     <table class="printable">
         <thead>
             <tr><td class="mflex">
-                <b>Escola De Música Vicent Serrano</b>
+                <b> <img src="/escola.256.png" width="12">Escola De Música Vicent Serrano</b>
                 <span class="mgrow">1ª Avaluació 2022/23</span> 
                 <b>{{ fullName }}</b> 
             </td></tr>
@@ -21,20 +21,17 @@
         </tbody>
     </table>
     <footer class="lastfooter">
-        <table v-if="!$equivalences.textMode">
+        <table>
             <tr>
-                <td>
-                    <b>Llegenda:</b>
-                    <v-icon icon="mdi-timer-sand" size="x-small" />:Insuficient
-                    <v-icon icon="mdi-check-bold" size="x-small" />:Bé
-                    <v-icon icon="mdi-star" size="x-small" />:Excel·lent
-                </td>
-            </tr>
-        </table>
-        <div class="lastfooter__fullname">{{ fullName }}</div>
+                <td><img src="/escola.256.png" width="48"></td>
+                <td><div class="lastfooter__fullname">{{ fullName }}</div>
         <p class="lastfooter__sign">
             Signatura pare/mare/tutor
-        </p>
+        </p></td>
+                <td><img src="/agrupacio.jpg" width="48"></td>
+            </tr>
+        </table>
+        
     </footer>
 </template>
 
