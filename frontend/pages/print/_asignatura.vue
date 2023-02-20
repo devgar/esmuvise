@@ -3,7 +3,10 @@
         v-if="numRubricas"
         class="printable__asignatura"
     >
-        <h4>{{ asignatura?.nameVLC }} <span class="grow">{{ itemsAverage }}</span> <span class="float normal">{{ curso(matricula.curso) }} </span></h4>
+        <h4>
+            {{ asignatura?.nameVLC }} 
+            <span class="grow">{{ itemsAverage }}</span> 
+            <span class="float normal">{{ curso(matricula.curso) }} </span></h4>
         <table>
             <EvaluationItem
                 v-for="rubrica of rubricas" :key="rubrica.id" 
