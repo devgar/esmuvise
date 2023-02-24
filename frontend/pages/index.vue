@@ -1,5 +1,7 @@
 <template>
     <div>
-        <h1>Esmuvise</h1>
+        <VCard>
+            <VCardTitle>EsMuViSe</VCardTitle>
+        </VCard>
     </div>
 </template>

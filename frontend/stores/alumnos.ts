@@ -13,5 +13,14 @@ export const useAlumnoStore = defineStore('alumno', () => {
         alumnos.value = (await $fetch<Alumno[]>('/api/alumnos')).sort(compare)
     }
 
-    return { alumnos, byId, fetch }
+    async function post(payload: Alumno) {
+        const data = await $fetch('/api/alumnos', {
+            method: 'POST',
+            body: payload,
+        })
+        if (data) await fetch()
+        return data
+    }
+
+    return { alumnos, byId, fetch, post }
 })

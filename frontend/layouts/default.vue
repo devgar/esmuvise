@@ -1,7 +1,7 @@
 <template>
     <v-app>
         <div class="no-print">
-            <v-app-bar title="EsMuViSe">
+            <v-app-bar :title="route.name?.toString()">
                 <v-btn to="/alumnos">Alumnos</v-btn>
                 <v-btn to="/asignaturas">Asignaturas</v-btn>
             </v-app-bar>
@@ -13,9 +13,14 @@
                 <v-card-actions>
                     <v-switch :label="switchText" v-model="textMode"></v-switch>
                 </v-card-actions>
-                <VCardTitle>Imprimir</VCardTitle>
                 <VCardActions>
-                    <VBtn @click="print" block label="imprimir">PRINT</VBtn>
+                    <VBtn @click="print" block label="imprimir">Imprimir</VBtn>
+                </VCardActions>
+            </VCard>
+
+            <VCard v-if="route.name === 'alumnos'">
+                <VCardActions>
+                    <NewAlumno />
                 </VCardActions>
             </VCard>
         </v-navigation-drawer>
