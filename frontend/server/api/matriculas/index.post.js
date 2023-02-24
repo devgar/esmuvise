@@ -1,9 +1,9 @@
-import { EvaluationItem } from 'database'
+import { Matricula } from 'database'
 
 export default defineEventHandler(async (event) => {
     const body = await readBody(event)
     try {
-        return await EvaluationItem.create(body)
+        return await Matricula.create(body)
     } catch (error) {
         if (error.name === 'SequelizeUniqueConstraintError')
             error = createError({
