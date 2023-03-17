@@ -60,24 +60,13 @@ const rubricas = computed(() => {
     return $rubricas.rubricas.filter(r => r.RubricaGroupId === rubricaGroup?.id)
 })
 
-const curso = (num: number) => { 
-    if (num === 0 ){
-        return 'iniciació musical'
-    }
-    if (num === 6){
-        return '4 anys'
-    }
-    if (num === 7){
-        return '5 anys'
-    }
-    if (num === 8){
-        return 'preparatori'
-    }
-    if (num === 9){
-        return 'llenguatge adults'
-    }
-    return `${num} curs`
-}
+const curso = (num: number) => ({
+    0: 'iniciació musical',
+    6: '4 anys',
+    7: '5 anys',
+    8: 'preparatori',
+    9: 'llenguatge adults',  
+}[num.toString()] || `${num} curs`)
 
 </script>
 
