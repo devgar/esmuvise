@@ -1,11 +1,26 @@
 <template>
-    <v-app>
-        <div class="no-print">
-            <v-app-bar :title="route.name?.toString()">
-                <v-btn to="/alumnos">Alumnos</v-btn>
-                <v-btn to="/asignaturas">Asignaturas</v-btn>
-            </v-app-bar>
-        </div>
+    <v-app full-height>
+        <v-app-bar class="no-print">
+            <v-container class="fill-height d-flex align-center">
+                <v-avatar
+                    class="me-10 ms-4"
+                    color="grey-darken-1"
+                    size="32"
+                    image="/escola.256.jpg"    
+                />
+                <v-btn to="/alumnos" variant="text">Alumnos</v-btn>
+                <v-btn to="/asignaturas" variant="text">Asignaturas</v-btn>
+                <v-spacer />
+                <v-responsive max-width="260">
+                    <v-text-field
+                        density="compact"
+                        hide-details
+                        variant="solo"
+                        append-inner-icon="mdi-magnify"
+                    />
+                </v-responsive>
+            </v-container>
+        </v-app-bar>
         
         <v-navigation-drawer class="no-print">
             <VCard v-if="route.name === 'print-AlumnoId'">
@@ -26,7 +41,11 @@
         </v-navigation-drawer>
 
 
-        <v-main><NuxtPage /></v-main>
+        <v-main>
+            <v-container fluid>
+                <NuxtPage />
+            </v-container>
+        </v-main>
     </v-app>
 </template>
 

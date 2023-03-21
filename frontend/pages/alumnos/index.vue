@@ -1,33 +1,53 @@
 <template>
-    <v-table class="h-auto" density="compact" fixed-header height="calc(100vh - 64px)" hover>
-        <thead>
-            <tr>
-                <th class="text-center"><b>Nom</b></th>
-                <th class="text-center"><b>%</b></th>
-                <th class="text-left"><b>Asignatures</b></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr v-for="item in $alumnos.alumnos" :key="item.id" @click="goTo">
-                <td class="v-col-3">
-                    <v-btn class="text-left" block :to="`/alumno/${item.id}`" variant="text">{{ item.lastName }}, <b>{{ item.firstName }}</b></v-btn>
-                </td>
-                <td class="text-center"><Ratio :alumno-id="item.id" /></td>
-                <td class="v-col-auto">
-                    <Matriculas :alumno-id="item.id" />
-                </td>
-            </tr>
-        </tbody>
-    </v-table>
+    <div style="display: flex; height: 200px;">
+        <VDataTable  v-model:items-per-page="itemsPerPage" :items="$alumnos.alumnos" :headers="headers" item-value="id" class="table" hide-default-footer fixed-header>
+            <template v-slot:item.name="{ item }">
+                <VBtn :to="`/alumno/${item.raw.id}`" variant="text" class="name-link">
+                    {{ item.raw.firstName }} {{ item.raw.lastName }}
+                </VBtn>
+            </template>
+            
+            <template v-slot:item.percent="{ item }">
+                <Ratio :alumno-id="item.raw.id" />
+            </template>
+            
+            <template v-slot:item.subject="{ item }">
+                <Matriculas :alumno-id="item.raw.id" />
+            </template>
+        </VDataTable>
+    </div>
 </template>
 
 <script setup>
+import { VDataTable } from 'vuetify/labs/VDataTable'
 import { useAlumnoStore } from '~~/stores/alumnos'
 import Matriculas from './_matriculas.vue'
 import Ratio from './_ratio.vue'
 
 const $alumnos = useAlumnoStore()
+
+const headers = [
+    { title: 'Name', align: 'start', sortable: true, key: 'name' },
+    { title: '%', align: 'center', sortable: false, key: 'percent' },
+    { title: 'Asignatures', align: 'start', sortable: false, key: 'subject' }
+]
+
+const itemsPerPage = ref(20);
+
+onMounted(() => {
+    setTimeout(() => {
+        itemsPerPage.value = -1
+    }, 200)
+})
 </script>
 
 <style scoped>
+.table {
+    height: calc(100vh - 96px);
+}
+.name-link {
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 </style>
