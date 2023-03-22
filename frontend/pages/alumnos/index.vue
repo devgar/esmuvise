@@ -26,19 +26,23 @@ import Ratio from './_ratio.vue'
 
 const $alumnos = useAlumnoStore()
 
-const headers = [
-    { title: 'Name', align: 'start', sortable: true, key: 'name' },
+const headersStatic = [
+    { title: 'Nom', align: 'start', sortable: true, key: 'name' },
     { title: '%', align: 'center', sortable: false, key: 'percent' },
     { title: 'Asignatures', align: 'start', sortable: false, key: 'subject' }
 ]
 
-const itemsPerPage = ref(20);
+const itemsPerPage = computed(() => fullLoad.value ? -1 : 30)
+
+const fullLoad = ref(false)
 
 onMounted(() => {
     setTimeout(() => {
-        itemsPerPage.value = -1
-    }, 200)
+        fullLoad.value = true
+    }, 0)
 })
+
+const headers = computed(() => fullLoad.value? headersStatic : [headersStatic[0]])
 </script>
 
 <style scoped>
