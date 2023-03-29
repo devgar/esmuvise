@@ -7,10 +7,12 @@
 </template>
 
 <script setup>
-// import { useAlumnoStore } from '~~/stores/alumnos'
+import { useEvaluationStore } from '~~/stores/evaluation'
 import { useEvaluationItemStore } from '~~/stores/evaluationItems'
 import { useMatriculaStore } from '~~/stores/matriculas'
 import { useNumRubricasByMat } from '~~/stores/numRubricasByMat'
+
+const $evaluation = useEvaluationStore()
 
 const props = defineProps({ alumnoId: Number })
 
@@ -27,7 +29,10 @@ const evaluateHref = computed(() =>
     `/alumno/${props.alumnoId}`
 )
 
-const evaluatedNum = computed(() => $evaluationItems.byAlumnoId(props.alumnoId).length)
+const evaluatedNum = computed(() => $evaluationItems.byKeys({
+    AlumnoId: props.alumnoId,
+    EvaluationId: $evaluation.evaluation,
+}).length)
 
 const evaluatableNum = computed(() => 
     $matriculas.byAlumnoId(props.alumnoId)
