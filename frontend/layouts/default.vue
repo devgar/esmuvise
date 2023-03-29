@@ -31,6 +31,14 @@
                     </VListItemAction>
                 </VListItem>
             </VList>
+
+            <VList v-if="route.name === 'alumno-id'">
+                <VListItem>
+                    <VListItemAction>
+                        <!-- <NewMatricula /> -->
+                    </VListItemAction>
+                </VListItem>
+            </VList>
         </v-navigation-drawer>
 
         <v-main v-if="loaded">

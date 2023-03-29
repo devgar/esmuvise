@@ -23,5 +23,14 @@ export const useMatriculaStore = defineStore('matricula', () => {
         matriculas.value = await $fetch<Matricula[]>('/api/matriculas?full')
     }
 
-    return { matriculas, byAlumnoId, byAsignaturaId, fetch, fetchFull }
+    async function post(payload: Matricula) {
+        const data = await $fetch('/api/matriculas', {
+            method: 'POST',
+            body: payload,
+        })
+        if (data) await fetch()
+        return data
+    }
+
+    return { matriculas, byAlumnoId, byAsignaturaId, fetch, fetchFull, post }
 })
