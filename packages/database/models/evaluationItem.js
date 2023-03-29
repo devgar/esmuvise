@@ -26,12 +26,16 @@ module.exports = (sequelize, DataTypes) => {
       body: {
         type: DataTypes.TEXT,
         allownNull: false
-      }
+      },
+      EvaluationId: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+      },
     },
     {
       sequelize,
       modelName: 'EvaluationItem',
-      indexes: [unique(['RubricaId', 'AlumnoId', 'AsignaturaId'])]
+      indexes: [unique(['RubricaId', 'AlumnoId', 'AsignaturaId', 'EvaluationId'])]
     }
   )
   return EvaluationItem
