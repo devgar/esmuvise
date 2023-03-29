@@ -1,6 +1,6 @@
 import type { EvaluationItem } from "~~/utils/types"
 
-interface Args { AlumnoId?: number, AsignaturaId?: number, MatriculaId?: number, RubricaId?: number }
+interface Args { AlumnoId?: number, AsignaturaId?: number, MatriculaId?: number, RubricaId?: number, EvaluationId?: number }
 
 export const useEvaluationItemStore = defineStore('evaluationItem', () => {
     let lastCall =  Date.now() - 10000
