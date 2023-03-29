@@ -80,11 +80,13 @@ const selected = ref('')
 const text = ref('')
 const placeholder = ref('Selecciona una opció')
 
+const $evaluation = useEvaluationStore()
+
 const $evaluationItems = useEvaluationItemStore()
 $evaluationItems.fetch()
 const evaluationItem = computed(() => {
     const { matriculaId, rubricaId } = props
-    return $evaluationItems.byKeys({ MatriculaId: matriculaId, RubricaId: rubricaId })[0]
+    return $evaluationItems.byKeys({ MatriculaId: matriculaId, RubricaId: rubricaId, EvaluationId: $evaluation.evaluation })[0]
 })
 
 const hasChanges = computed(() => {
@@ -95,7 +97,7 @@ const hasChanges = computed(() => {
     return false
 })
 
-const $evaluation = useEvaluationStore()
+
 
 const parseValueToDec = (v) => (v / 100).toFixed(1)
 const parseValueToCen = (v) => Math.floor(Number(value.value) * 100)
