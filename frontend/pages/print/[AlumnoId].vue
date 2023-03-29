@@ -3,14 +3,14 @@
         <thead>
             <tr><td class="mflex">
                 <b> <img src="/escola.256.png" width="12">Escola De Música Vicent Serrano</b>
-                <span class="mgrow">1ª Avaluació 2022/23</span> 
+                <span class="mgrow">{{ $evaluation.id.value }}ª Avaluació 2022/23</span> 
                 <b>{{ fullName }}</b> 
             </td></tr>
         </thead>
         <tbody>
             <tr>
                 <td>
-                    <h5 class="mflex mtop4"><i></i><div class="mgrow"></div>1ª Avaluació</h5>
+                    <h5 class="mflex mtop4"><i></i><div class="mgrow"></div>{{ $evaluation.id.value }}ª Avaluació</h5>
                     <h3 @click="copyCB" class="mbottom2">{{ fullName }}</h3>
                     <Asignatura
                         v-for="matricula in matriculas" key="matricula.id"
@@ -36,10 +36,12 @@
 </template>
 
 <script setup>
+import { useEvaluationStore } from '~~/stores/evaluation'
 import { useAlumnoStore } from '~~/stores/alumnos'
 import { useMatriculaStore } from '~~/stores/matriculas'
 import Asignatura from './_asignatura.vue'
 
+const $evaluation = useEvaluationStore()
 const $alumnos = useAlumnoStore()
 const $matriculas = useMatriculaStore()
 
