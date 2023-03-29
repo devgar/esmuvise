@@ -1,5 +1,5 @@
 <template>
-    <v-app full-height>
+    <v-app v-if="loaded" vfull-height>
         <v-app-bar class="no-print">
             <v-container class="fill-height d-flex align-center">
                 <v-avatar
@@ -16,8 +16,7 @@
             </v-container>
         </v-app-bar>
         
-
-        <v-navigation-drawer class="no-print">
+        <v-navigation-drawer v-if="loaded" class="no-print">
             <VCard v-if="route.name === 'print-AlumnoId'">
                 <VCardTitle>Impresión</VCardTitle>
                 <VCardActions>
@@ -34,8 +33,7 @@
             </VList>
         </v-navigation-drawer>
 
-
-        <v-main>
+        <v-main v-if="loaded">
             <v-container fluid>
                 <NuxtPage />
             </v-container>
@@ -45,11 +43,15 @@
 
 <script setup lang="ts">
 import useMetaStore from '~~/stores/metaStore'
+const globalError = useGlobalError()
 
-useMetaStore().fetch()
 const print = () => window.print()
-
 const route = useRoute();
+
+const loaded = ref(false)
+useMetaStore().fetch()
+    .then(() =>  loaded.value = true)
+    .catch((err) => globalError.value = err)
 
 </script>
 

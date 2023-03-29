@@ -1,6 +1,7 @@
 import type { Matricula } from "~~/utils/types"
 
 export const useMatriculaStore = defineStore('matricula', () => {
+    let lastCall = Date.now() - 10000
     const matriculas = ref<Matricula[]>([])
 
     const byAlumnoId = computed(() => (AlumnoId: number) => 
@@ -12,6 +13,9 @@ export const useMatriculaStore = defineStore('matricula', () => {
     )
 
     async function fetch() {
+        const now = Date.now()
+        if ((lastCall + 5000) > now) return
+        lastCall = now
         matriculas.value = await $fetch<Matricula[]>('/api/matriculas')
     }
 

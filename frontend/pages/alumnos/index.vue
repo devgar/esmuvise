@@ -1,5 +1,4 @@
 <template>
-    <div style="display: flex; height: 200px;">
         <VDataTable  v-model:items-per-page="itemsPerPage" :items="$alumnos.alumnos" :headers="headers" item-value="id" class="table" hide-default-footer fixed-header>
             <template v-slot:item.name="{ item }">
                 <VBtn :to="`/alumno/${item.raw.id}`" variant="text" class="name-link">
@@ -15,7 +14,7 @@
                 <Matriculas :alumno-id="item.raw.id" />
             </template>
         </VDataTable>
-    </div>
+
 </template>
 
 <script setup>

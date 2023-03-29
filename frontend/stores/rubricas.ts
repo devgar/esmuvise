@@ -7,7 +7,7 @@ export const useRubricaStore = defineStore('rubrica', () => {
 
     async function fetch() {
         const now = Date.now()
-        if ((lastCall + 5000) > now) return null
+        if ((lastCall + 5000) > now) return
         lastCall = now
         rubricas.value = await $fetch<Rubrica[]>('/api/rubricas')
     }

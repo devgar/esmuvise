@@ -15,7 +15,8 @@ export const useEvaluationItemStore = defineStore('evaluationItem', () => {
 
     async function fetch () {
         const now = Date.now()
-        if ((lastCall + 5000) > now) return null
+        if ((lastCall + 5000) > now) return
+        console.log('Fetching evaluation items because', lastCall, now)
         lastCall = now
         evaluationItems.value = await $fetch<EvaluationItem[]>('/api/evaluationItems')
     }

@@ -18,7 +18,7 @@
             <v-btn
                 variant="text"
                 :class="fav ? 'text-red' : ''"
-                icon="mdi-heart"
+                icon="mdi-logout-variant"
                 @click="fav = !fav"
             ></v-btn>
             </template>
