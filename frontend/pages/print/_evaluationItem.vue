@@ -14,22 +14,18 @@
 <script lang="ts" setup>
 import { useEvaluationItemStore } from '~~/stores/evaluationItems';
 import { useEquivalenceStore } from '~~/stores/equivalences';
+import { useEvaluationStore } from '~~/stores/evaluation';
 
 const $equivalence = useEquivalenceStore()
 
 const props = defineProps<{ MatriculaId?: number, RubricaId?: number, concept?: string }>()
 
+const $evaluation = useEvaluationStore()
+
 const $evaluationItems = useEvaluationItemStore()
 const evaluationItem = computed(() => {
     const { RubricaId, MatriculaId } = props
-    return $evaluationItems.byKeys({ RubricaId, MatriculaId }).at(0)
-})
-
-const icon = computed(() => {
-    const value = evaluationItem.value?.value || 0
-    if (value < 500) return 'mdi-timer-sand'
-    if( value < 700) return 'mdi-check-bold'
-    return 'mdi-star'
+    return $evaluationItems.byKeys({ RubricaId, MatriculaId, EvaluationId: $evaluation.id.value }).at(0)
 })
 
 </script>

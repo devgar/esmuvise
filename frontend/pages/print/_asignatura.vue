@@ -21,6 +21,7 @@
 <script setup lang="ts">
 import type { Matricula } from '~~/utils/types'
 
+import { useEvaluationStore } from '~~/stores/evaluation'
 import { useAsignaturaStore } from '~~/stores/asignaturas'
 import { useRubricaGroupStore } from '~~/stores/rubricaGroups'
 import { useRubricaStore } from '~~/stores/rubricas'
@@ -38,9 +39,10 @@ const $rubricas = useRubricaStore()
 const $numRubricas = useNumRubricasByMat()
 const $evalutionItems = useEvaluationItemStore()
 const $equivalences = useEquivalenceStore()
+const $evaluation = useEvaluationStore()
 
 const itemsAverage = computed(()=> {
-    const searchKeys = (({ id:MatriculaId, AsignaturaId })=>({ MatriculaId, AsignaturaId }))(props.matricula)
+    const searchKeys = (({ id:MatriculaId, AsignaturaId })=>({ MatriculaId, AsignaturaId, EvaluationId: $evaluation.id.value }))(props.matricula)
     const matches = $evalutionItems.byKeys(searchKeys)
     const average = matches.reduce((acc, curr) => acc + curr.value, 0) / matches.length
     return $equivalences.repr(average)
