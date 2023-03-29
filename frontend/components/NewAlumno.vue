@@ -5,10 +5,7 @@
       scrollable
     >
       <template v-slot:activator="{ props }">
-        <v-btn
-          color="primary"
-          v-bind="props"
-        >
+        <v-btn border class="flex-grow-1" size="large" v-bind="props">
           Nou Alumne
         </v-btn>
       </template>

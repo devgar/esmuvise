@@ -11,33 +11,27 @@
                 <v-btn to="/alumnos" variant="text">Alumnos</v-btn>
                 <v-btn to="/asignaturas" variant="text">Asignaturas</v-btn>
                 <v-spacer />
-                <v-responsive max-width="260">
-                    <v-text-field
-                        density="compact"
-                        hide-details
-                        variant="solo"
-                        append-inner-icon="mdi-magnify"
-                    />
-                </v-responsive>
+                <v-btn icon="mdi-magnify" />
+                <UserMenu />
             </v-container>
         </v-app-bar>
         
+
         <v-navigation-drawer class="no-print">
             <VCard v-if="route.name === 'print-AlumnoId'">
-                <VCardTitle>Iconos/Texto</VCardTitle>
-                <v-card-actions>
-                    <v-switch :label="switchText" v-model="textMode"></v-switch>
-                </v-card-actions>
+                <VCardTitle>Impresión</VCardTitle>
                 <VCardActions>
                     <VBtn @click="print" block label="imprimir">Imprimir</VBtn>
                 </VCardActions>
             </VCard>
 
-            <VCard v-if="route.name === 'alumnos'">
-                <VCardActions>
-                    <NewAlumno />
-                </VCardActions>
-            </VCard>
+            <VList v-if="route.name === 'alumnos'">
+                <VListItem>
+                    <VListItemAction>
+                        <NewAlumno />
+                    </VListItemAction>
+                </VListItem>
+            </VList>
         </v-navigation-drawer>
 
 
@@ -51,17 +45,9 @@
 
 <script setup lang="ts">
 import useMetaStore from '~~/stores/metaStore'
-import { useEquivalenceStore } from '~~/stores/equivalences';
-import { storeToRefs } from 'pinia'
 
 useMetaStore().fetch()
-const $equivalences = useEquivalenceStore()
-
-const { textMode } = storeToRefs($equivalences)
-
 const print = () => window.print()
-
-const switchText = computed(() => textMode.value ? 'texto' : 'iconos')
 
 const route = useRoute();
 
