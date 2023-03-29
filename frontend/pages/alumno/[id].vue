@@ -13,7 +13,7 @@
 
         <v-list class="my-4 mx-auto bg-transparent" v-if="route.name === 'alumno-id'">
             <v-list-item title="Telefon" prepend-icon="mdi-phone" :subtitle="alumno.telephone" />
-            <v-list-item title="Direccio" prepend-icon="mdi-map" :subtitle="alumno.domicilio" />
+            <v-list-item title="Direcció" prepend-icon="mdi-map" :subtitle="alumno.domicilio" />
             <v-list-item :subtitle="`${ alumno.codPostal } · ${ alumno.localidad }`" />
         </v-list>
     </v-card>
@@ -21,7 +21,7 @@
     <v-card v-if="asignaturas.length" class="mx-8 my-4" max-width="600">
         <v-list class="bg-transparent">
             <v-list-item v-for="matricula of asignaturas" :key="matricula.id" 
-                :title="matricula.Asignatura.nameVLC" 
+                :title="matricula.Asignatura?.nameVLC" 
                 :subtitle="`${matricula.curso} - ${matricula.ano}/${matricula.ano + 1}`"
                 :to="`/alumno/${alumnoId}/matriculas/${matricula.id}`"
             />

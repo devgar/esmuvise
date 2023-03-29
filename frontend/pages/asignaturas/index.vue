@@ -10,7 +10,7 @@
             <tr v-for="item of usedAsignaturas" :key="item.id">
                 <td class="v-col-2">
                     <v-btn class="text-left" block :to="`/asignatura/${item.id}`" variant="text">
-                        {{ item.nameVLC }}
+                        {{ item?.nameVLC }}
                     </v-btn>
                 </td>
                 <td class="v-col-auto">

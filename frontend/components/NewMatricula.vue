@@ -28,7 +28,7 @@
                             label="Asignatura"
                             :items="$asignaturas.asignaturas"
                             item-value="id"
-                            item-title="nameVLC"
+                            item-title="nameCAS"
                             
                             />
                           </v-col>
@@ -68,7 +68,7 @@
   const alumnoId = computed(() => parseInt(route.params.id))
   
   $asignaturas.fetch() 
-  $matriculas.fetch()
+  $matriculas.fetchFull()
   
   const courseLines = [
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9
@@ -83,12 +83,13 @@
   
   async function create () {
     console.log("Inserting", asignatura.value, course.value)
+      const year = (new Date()).getFullYear()
       const result = await $matriculas.post({
         AlumnoId: alumnoId.value,
         AsignaturaId: asignatura.value,
         curso: course.value,
+        ano: year -1,
       })
-      console.log("RESULT:", result)
   
       form.value.reset()
       dialog.value = false

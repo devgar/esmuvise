@@ -35,7 +35,7 @@
             <VList v-if="route.name === 'alumno-id'">
                 <VListItem>
                     <VListItemAction>
-                        <!-- <NewMatricula /> -->
+                        <NewMatricula />
                     </VListItemAction>
                 </VListItem>
             </VList>

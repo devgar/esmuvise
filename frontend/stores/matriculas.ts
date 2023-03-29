@@ -20,6 +20,9 @@ export const useMatriculaStore = defineStore('matricula', () => {
     }
 
     async function fetchFull() {
+        const now = Date.now()
+        if ((lastCall + 5000) > now) return
+        lastCall = now
         matriculas.value = await $fetch<Matricula[]>('/api/matriculas?full')
     }
 
@@ -28,7 +31,10 @@ export const useMatriculaStore = defineStore('matricula', () => {
             method: 'POST',
             body: payload,
         })
-        if (data) await fetch()
+        if (data) {
+            lastCall = Date.now() - 10000
+            await fetchFull()
+        }
         return data
     }
 

@@ -2,7 +2,7 @@
     <div v-if="asignaturas.length == 0">Sin matricular</div>
     <div v-else class="asignaturas">
         <v-btn v-for="{ id, Asignatura } in asignaturas" :key="id"
-            v-text="Asignatura.nameVLC" router nuxt-link
+            v-text="Asignatura?.nameVLC" router nuxt-link
             :to="`/alumno/${props.alumnoId}/matriculas/${id}`"
             size="x-small" variant="outlined"
         />
