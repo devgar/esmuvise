@@ -10,7 +10,6 @@
     <v-card min-width="300">
         <v-list>
         <v-list-item
-            prepend-avatar="https://cdn.vuetifyjs.com/images/john.jpg"
             title="Anónimo"
             subtitle="Evaluación"
         >
@@ -18,15 +17,14 @@
             <v-btn
                 variant="text"
                 :class="fav ? 'text-red' : ''"
-                icon="mdi-logout-variant"
                 @click="fav = !fav"
-            ></v-btn>
+            >{{ $evaluation.evaluation }}</v-btn>
             </template>
         </v-list-item>
         </v-list>
 
         <v-divider></v-divider>
-
+<v-list>
         <v-list-item title="Alumnos">
             <template v-slot:append>{{ $Alumnos.alumnos.length }}</template>
         </v-list-item>
@@ -50,6 +48,8 @@
         <v-list-item title="Rubricas">
             <template v-slot:append>{{ $Rubricas.rubricas.length }}</template>
         </v-list-item>
+    </v-list>
+        <v-divider></v-divider>
 
         <v-list>
         <v-list-item title="Route">
@@ -85,13 +85,15 @@
     import { useEvaluationItemStore } from '~~/stores/evaluationItems';
     import { useRubricaGroupStore } from '~~/stores/rubricaGroups';
     import { useRubricaStore } from '~~/stores/rubricas';
-
+    import { useEvaluationStore } from '~~/stores/evaluation';
+    
     const $Alumnos = useAlumnoStore()
     const $Asignaturas = useAsignaturaStore()
     const $Matriculas = useMatriculaStore()
     const $EvaluationItems = useEvaluationItemStore()
     const $RubricaGroups = useRubricaGroupStore()
     const $Rubricas = useRubricaStore()
+    const $evaluation = useEvaluationStore()
     const menu = ref(false)
     const fav = ref(false)
     const route = useRoute()
