@@ -12,9 +12,9 @@
     "@pinia/nuxt": "^0.4.6",
     "@mdi/font": "^7.1.96",
     "database": "workspace:*",
-    "nuxt": "3.2.0",
+    "nuxt": "3.3.2",
     "pinia": "^2.0.28",
-    "vuetify": "^3.1.5",
+    "vuetify": "^3.1.11",
     "sass": "^1.57.1"
   }
 }
