@@ -56,6 +56,7 @@
 <script setup>
 import { useRubricaStore } from '~~/stores/rubricas'
 import { useEvaluationItemStore } from '~~/stores/evaluationItems'
+import { useEvaluationStore } from '~~/stores/evaluation'
 
 const props = defineProps({
     alumnoId: Number,
@@ -94,6 +95,8 @@ const hasChanges = computed(() => {
     return false
 })
 
+const $evaluation = useEvaluationStore()
+
 const parseValueToDec = (v) => (v / 100).toFixed(1)
 const parseValueToCen = (v) => Math.floor(Number(value.value) * 100)
 // getOptionsByValue in base 1000
@@ -123,7 +126,8 @@ const submit = async () => {
         $evaluationItems.post({
             value: valueNum,
             body: text.value,
-            ...capitalizekeys(props)
+            ...capitalizekeys(props),
+            EvaluationId: $evaluation.evaluation
         })
     }
     else {
