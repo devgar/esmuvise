@@ -35,7 +35,10 @@ export const useEvaluationItemStore = defineStore('evaluationItem', () => {
             method: 'PATCH',
             body,
         })
-        if (data) await fetch()
+        if (data) {
+            lastCall =  Date.now() - 10000
+            await fetch()
+        }
         return data
     }
 
