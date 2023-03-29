@@ -5,11 +5,15 @@ function compare(a: Alumno, b: Alumno ) {
 }
 
 export const useAlumnoStore = defineStore('alumno', () => {
+    let lastCall = Date.now() - 10000
     const alumnos = ref<Alumno[]>([])
 
     const byId = computed(() => (id: number) => alumnos.value.find(a => a.id === id))
 
     async function fetch() {
+        const now = Date.now()
+        if ((lastCall + 5000) > now) return null
+        lastCall = now
         alumnos.value = (await $fetch<Alumno[]>('/api/alumnos')).sort(compare)
     }
 

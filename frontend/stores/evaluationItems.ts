@@ -3,6 +3,7 @@ import type { EvaluationItem } from "~~/utils/types"
 interface Args { AlumnoId?: number, AsignaturaId?: number, MatriculaId?: number, RubricaId?: number }
 
 export const useEvaluationItemStore = defineStore('evaluationItem', () => {
+    let lastCall =  Date.now() - 10000
     const evaluationItems = ref<EvaluationItem[]>([])
 
     const byKeys = computed(() => (args: Args) =>
@@ -13,6 +14,9 @@ export const useEvaluationItemStore = defineStore('evaluationItem', () => {
     )
 
     async function fetch () {
+        const now = Date.now()
+        if ((lastCall + 5000) > now) return null
+        lastCall = now
         evaluationItems.value = await $fetch<EvaluationItem[]>('/api/evaluationItems')
     }
 
