@@ -129,7 +129,7 @@ const submit = async () => {
             value: valueNum,
             body: text.value,
             ...capitalizekeys(props),
-            EvaluationId: $evaluation.evaluation
+            EvaluationId: $evaluation.evaluation,
         })
     }
     else {
@@ -137,6 +137,7 @@ const submit = async () => {
             id: evaluationItem.value.id,
             value: valueNum,
             body: text.value,
+            EvaluationId: $evaluation.evaluation,
         })
     }
 }
