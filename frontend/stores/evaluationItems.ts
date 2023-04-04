@@ -14,7 +14,8 @@ export const useEvaluationItemStore = defineStore('evaluationItem', () => {
     )
 
     async function fetch () {
-        const now = Date.now() - 10000 // TODO: 
+        const now = Date.now()
+        lastCall = now - 10000 // TODO FETCH THIS BETTER
         if ((lastCall + 5000) > now) return
         console.log('Fetching evaluation items because', lastCall, now)
         lastCall = now
