@@ -110,13 +110,15 @@ watch(value, () => {
     selected.value = options.find(o => o.value >= mult)?.id
 })
 
-watch(selected, () => {
-    text.value = rubrica?.value[selected.value]
+watch(selected, (_, old) => {
+    text.value = old ? rubrica?.value[selected.value]
+        : evaluationItem.value.body
 })
 
 watch(evaluationItem, () => {
     value.value = (evaluationItem.value.value / 100).toFixed(1)
     selected.value = options.find(o => o.value >= evaluationItem.value.value)?.id
+    console.log("Setting body to", evaluationItem.value.body)
     text.value = evaluationItem.value.body
 })
 

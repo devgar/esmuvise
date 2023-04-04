@@ -13,14 +13,14 @@ export default defineStore('__META__', () => {
     const $rubricaGroups = useRubricaGroupStore()
     const $rubricas = useRubricaStore()
     
-    const fetch = async () => {
-        $alumnos.fetch()
-        $asignaturas.fetch()
-        $evaluatoinItemss.fetch()
-        $matriculas.fetchFull()
-        $rubricaGroups.fetch()
-        $rubricas.fetch()
-    }
+    const fetch = () => Promise.all([
+        $alumnos.fetch(),
+        $asignaturas.fetch(),
+        $evaluatoinItemss.fetch(),
+        $matriculas.fetchFull(),
+        $rubricaGroups.fetch(),
+        $rubricas.fetch(),
+    ])
     
     return { fetch }
 })

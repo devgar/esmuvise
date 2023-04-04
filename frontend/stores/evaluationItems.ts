@@ -14,7 +14,7 @@ export const useEvaluationItemStore = defineStore('evaluationItem', () => {
     )
 
     async function fetch () {
-        const now = Date.now()
+        const now = Date.now() - 10000 // TODO: 
         if ((lastCall + 5000) > now) return
         console.log('Fetching evaluation items because', lastCall, now)
         lastCall = now
@@ -26,7 +26,8 @@ export const useEvaluationItemStore = defineStore('evaluationItem', () => {
             method: 'POST',
             body: payload,
         })
-        if (data) await fetch()
+        if (data)
+            await fetch()
         return data
     }
     async function patch(payload: EvaluationItem) {
@@ -35,10 +36,8 @@ export const useEvaluationItemStore = defineStore('evaluationItem', () => {
             method: 'PATCH',
             body,
         })
-        if (data) {
-            lastCall =  Date.now() - 10000
+        if (data)
             await fetch()
-        }
         return data
     }
 
