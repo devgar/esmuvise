@@ -4,9 +4,13 @@
         class="printable__asignatura"
     >
         <h4>
-            {{ asignatura?.nameVLC }} 
-            <span class="grow">{{ itemsAverage }}</span> 
-            <span class="float normal">{{ curso(matricula.curso) }} </span></h4>
+            <div class="grow">{{ asignatura?.nameVLC }}</div> 
+            <span class="normal">{{ curso(matricula.curso) }} </span>
+        </h4>
+        <h4>
+            <div class="semi old">Avaluació 1ª: {{ itemsAverageOld }}</div> 
+            <div class="semi">2ª: {{ itemsAverage }}</div> 
+        </h4>
         <table>
             <EvaluationItem
                 v-for="rubrica of rubricas" :key="rubrica.id" 
@@ -48,6 +52,13 @@ const itemsAverage = computed(()=> {
     return $equivalences.repr(average)
 })
 
+const itemsAverageOld = computed(()=> {
+    const searchKeys = (({ id:MatriculaId, AsignaturaId })=>({ MatriculaId, AsignaturaId, EvaluationId: 1 }))(props.matricula)
+    const matches = $evalutionItems.byKeys(searchKeys)
+    const average = matches.reduce((acc, curr) => acc + curr.value, 0) / matches.length
+    return $equivalences.repr(average)
+})
+
 const asignatura = computed(() =>
     $asignaturas.byId(props.matricula?.AsignaturaId)
 )
@@ -76,6 +87,22 @@ const curso = (num: number) => ({
 .grow {
     flex-grow: 1;
     margin: 0 0.6rem;
+}
+
+.semi {
+    width: 50%;
+}
+
+.title {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+}
+
+.old {
+    font-weight: normal;
 }
 @media print {
     .printable__asignatura {
