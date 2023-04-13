@@ -11,7 +11,7 @@ datasource db {
 }
 
 model Student {
-  id Int @id @default(autoincrement())
+  id BigInt @id
   firstName String
   lastName String
   dni String
@@ -25,7 +25,7 @@ model Student {
 }
 
 model Subject {
-  id Int @id @default(autoincrement())
+  id BigInt @id
   nameVLC String @unique
   nameCAS String @unique
   troncal Boolean
