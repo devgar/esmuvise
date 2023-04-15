@@ -6,16 +6,16 @@ generator client {
 }
 
 datasource db {
-  provider = "postgresql" // "sqlite" // mariadb || mysql
+  provider = "mysql" // "sqlite" // mariadb || mysql
   url      = env("DATABASE_URL")
 }
 
 model Student {
-  id BigInt @id
+  id BigInt @id @default(autoincrement())
   firstName String
   lastName String
   dni String
-  roadtype String
+  roadType String
   address String
   postalCode String
   city String
@@ -25,7 +25,7 @@ model Student {
 }
 
 model Subject {
-  id BigInt @id
+  id BigInt @id @default(autoincrement())
   nameVLC String @unique
   nameCAS String @unique
   troncal Boolean
