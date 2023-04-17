@@ -11,7 +11,7 @@
             <div class="semi old">Avaluació 1ª: {{ itemsAverageOld }}</div> 
             <div class="semi">2ª: {{ itemsAverage }}</div> 
         </h4>
-        <table>
+        <table cellpadding="0" cellspacing="0" width="100%">
             <EvaluationItem
                 v-for="rubrica of rubricas" :key="rubrica.id" 
                 :MatriculaId="matricula.id" 

@@ -1,12 +1,16 @@
 <template>
     <tr class="printable__evaluationItem">
-        <td v-if="!$equivalence.textMode">
-            <v-icon :icon="$equivalence.repr(evaluationItem?.value || 0)" size="x-small"></v-icon>
+        <td width="50%" class="printable__evaluationItemConceptCell">
+            <u>{{ props.concept }}:</u>
+                <i v-if="$equivalence.textMode">{{ $equivalence.repr(evaluationItem?.value || 0) }}</i> 
         </td>
         <td class="printable__evaluationItemConceptCell">
-            <span class="printable__evaluationItemConcept--low">{{ props.concept }}:</span> 
-            <b v-if="$equivalence.textMode">{{ $equivalence.repr(evaluationItem?.value || 0) }}</b>
-            {{ evaluationItem?.body }}
+            <b v-if="$equivalence.textMode">{{ $equivalence.repr(evaluationItemOld?.value || 0) }}</b>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <div style="font-size: 90%">{{ evaluationItem?.body }}</div>
         </td>
     </tr>
 </template>
@@ -28,19 +32,22 @@ const evaluationItem = computed(() => {
     return $evaluationItems.byKeys({ RubricaId, MatriculaId, EvaluationId: $evaluation.id.value }).at(0)
 })
 
+const evaluationItemOld = computed(() => {
+    const { RubricaId, MatriculaId } = props
+    return $evaluationItems.byKeys({ RubricaId, MatriculaId, EvaluationId: 1 }).at(0)
+})
+
 </script>
 
 <style scoped>
 .printable__evaluationItem {
     display: block;
     padding: 0 0 0.4rem;
+    width: 100%;
 }
 .printable__evaluationItem td {
     vertical-align: text-top;
-}
-.printable__evaluationItemConcept--low {
-    text-decoration: underline;
-    padding: 0 0.4rem;
+    width: 50vw;
 }
 
 .printable__evaluationItemConceptCell {
@@ -48,7 +55,7 @@ const evaluationItem = computed(() => {
 }
 
 .printable__evaluationItemConceptCell i {
-    display: inline-block; padding: 0 0.4rem;
+    padding: 0 0.4rem; margin-right: 4rem;
     text-decoration: none;
 }
 </style>

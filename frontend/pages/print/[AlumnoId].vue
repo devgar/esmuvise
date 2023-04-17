@@ -10,8 +10,10 @@
         <tbody>
             <tr>
                 <td>
-                    <h5 class="mflex mtop4"><i></i><div class="mgrow"></div>{{ $evaluation.id.value }}ª Avaluació</h5>
-                    <h3 @click="copyCB" class="mbottom2">{{ fullName }}</h3>
+                    <div style="display: flex;">
+                        <h3 @click="copyCB" class="mgrow">{{ fullName }}</h3>
+                        <h5 class="mflex"><i></i><div class="mgrow"></div>{{ $evaluation.id.value }}ª Avaluació</h5>
+                    </div>
                     <Asignatura
                         v-for="matricula in matriculas" key="matricula.id"
                         :matricula="matricula"
