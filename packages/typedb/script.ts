@@ -15,7 +15,7 @@ async function main() {
             firstName: "Menganito",
             lastName: "Fulgencio",
             dni: "12345678X",
-            roadtype: "Calle",
+            roadType: "Calle",
             address: "Castillo",
             postalCode: "12110",
             city: "L'Alcora",

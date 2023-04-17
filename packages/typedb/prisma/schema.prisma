@@ -11,28 +11,49 @@ datasource db {
 }
 
 model Student {
-  id BigInt @id @default(autoincrement())
-  firstName String
-  lastName String
-  dni String
-  roadType String
-  address String
-  postalCode String
-  city String
-  telephone String
-  birthDate DateTime
-  sex String
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  firstName  String
+  lastName   String
+  dni        String    @default("")
+  roadType   String    @default("")
+  address    String    @default("")
+  postalCode String    @default("")
+  city       String    @default("")
+  telephone  String    @default("")
+  birthDate  DateTime?
+  sex        String    @default("")
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  enrollments Enrollment[]
 }
 
 model Subject {
-  id BigInt @id @default(autoincrement())
-  nameVLC String @unique
-  nameCAS String @unique
-  troncal Boolean
+  id      BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  nameVLC String  @unique
+  nameCAS String  @unique
+  troncal Boolean @default(false)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+
+  enrollments Enrollment[]
+}
+
+model Enrollment {
+  id     BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  year   Int
+  course Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  studentId BigInt  @db.UnsignedBigInt
+  student   Student @relation(fields: [studentId], references: [id])
+  subjectId BigInt  @db.UnsignedBigInt
+  subject   Subject @relation(fields: [subjectId], references: [id])
+
+  // @@unique([id, year, course, studentId, subjectId])
+  @@unique([id, year, studentId, subjectId])
 }
