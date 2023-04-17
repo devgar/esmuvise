@@ -11,6 +11,7 @@
     "migrate": "pnpm --stream -r migrate",
     "migrate:status": "pnpm --stream -r migrate status",
     "migrate:deploy": "pnpm --stream -r migrate deploy",
+    "studio": "pnpm --stream -r studio",
     "test": "pnpm --stream -r test",
     "pnpm": "npm x --y pnpm",
     "start": "cd frontend; node .output/server/index.mjs"
@@ -27,11 +28,5 @@
   "homepage": "https://github.com/devgar/esmuvise#readme",
   "devDependencies": {
     "pnpm": "^7.22.0"
-  },
-  "workspaces": [
-    "frontend",
-    "database",
-    "backend",
-    "packages/*"
-  ]
+  }
 }

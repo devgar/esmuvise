@@ -4,11 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "pnpm prisma generate",
+    "dev": "pnpm prisma generate --watch",
+    "test": "ts-node script.ts",
+    "studio": "prisma studio",
     "migrate": "prisma migrate"
   },
   "keywords": [],
-  "author": "",
+  "author": "Edgar Albalate <dev@gar.im>",
   "license": "UNLICENSED",
   "devDependencies": {
     "@types/node": "^18.15.11",
