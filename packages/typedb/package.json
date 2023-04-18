@@ -1,0 +1,26 @@
+{
+  "name": "typedb",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm prisma generate",
+    "dev": "pnpm prisma generate --watch",
+    "prisma": "prisma",
+    "test": "ts-node script.ts",
+    "studio": "prisma studio",
+    "migrate": "prisma migrate"
+  },
+  "keywords": [],
+  "author": "Edgar Albalate <dev@gar.im>",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "prisma": "^4.13.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.13.0"
+  }
+}

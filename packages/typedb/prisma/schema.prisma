@@ -1,0 +1,119 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql" // "sqlite" // mariadb || mysql
+  url      = env("DATABASE_URL")
+}
+
+model Student {
+  id         BigInt    @id @default(autoincrement()) @db.UnsignedBigInt
+  firstName  String
+  lastName   String
+  dni        String    @default("")
+  roadType   String    @default("")
+  address    String    @default("")
+  postalCode String    @default("")
+  city       String    @default("")
+  telephone  String    @default("")
+  birthDate  DateTime?
+  sex        String    @default("")
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  enrollments Enrollment[]
+}
+
+model Subject {
+  id      BigInt  @id @default(autoincrement()) @db.UnsignedBigInt
+  nameVLC String  @unique
+  nameCAS String  @unique
+  troncal Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  enrollments Enrollment[]
+  rubricGroupId BigInt? @db.UnsignedBigInt
+}
+
+model Enrollment {
+  id     BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  year   Int
+  course Int
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  studentId BigInt  @db.UnsignedBigInt
+  student   Student @relation(fields: [studentId], references: [id])
+  subjectId BigInt  @db.UnsignedBigInt
+  subject   Subject @relation(fields: [subjectId], references: [id])
+
+  // @@unique([id, year, course, studentId, subjectId])
+  @@unique([id, year, studentId, subjectId])
+}
+
+model Equivalence {
+  id    BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  max   Int
+  icon  String
+  label String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RubricGroup {
+  id   BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  name String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Rubric {
+  id      BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  concept String
+  vHigh   String
+  vMid    String
+  vLow    String
+  vFail   String
+
+  rubricGroupId BigInt  @db.UnsignedBigInt
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Evaluation {
+  id      BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  year    Int
+  quarter Int
+
+  startsAt DateTime
+  endsAt  DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model EvaluationItem {
+  id           BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  value        Int
+  body         String
+
+  studentId    BigInt @db.UnsignedBigInt
+  subjectId    BigInt @db.UnsignedBigInt
+  rubricId     BigInt @db.UnsignedBigInt
+  enrollmentId BigInt @db.UnsignedBigInt
+  evaluationId BigInt @db.UnsignedBigInt
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
