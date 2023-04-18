@@ -39,6 +39,7 @@ model Subject {
   updatedAt DateTime @updatedAt
 
   enrollments Enrollment[]
+  rubricGroupId BigInt? @db.UnsignedBigInt
 }
 
 model Enrollment {
@@ -56,4 +57,63 @@ model Enrollment {
 
   // @@unique([id, year, course, studentId, subjectId])
   @@unique([id, year, studentId, subjectId])
+}
+
+model Equivalence {
+  id    BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  max   Int
+  icon  String
+  label String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model RubricGroup {
+  id   BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  name String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Rubric {
+  id      BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  concept String
+  vHigh   String
+  vMid    String
+  vLow    String
+  vFail   String
+
+  rubricGroupId BigInt  @db.UnsignedBigInt
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Evaluation {
+  id      BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  year    Int
+  quarter Int
+
+  startsAt DateTime
+  endsAt  DateTime
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model EvaluationItem {
+  id           BigInt @id @default(autoincrement()) @db.UnsignedBigInt
+  value        Int
+  body         String
+
+  studentId    BigInt @db.UnsignedBigInt
+  subjectId    BigInt @db.UnsignedBigInt
+  rubricId     BigInt @db.UnsignedBigInt
+  enrollmentId BigInt @db.UnsignedBigInt
+  evaluationId BigInt @db.UnsignedBigInt
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

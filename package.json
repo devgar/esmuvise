@@ -11,6 +11,7 @@
     "migrate": "pnpm --stream -r migrate",
     "migrate:status": "pnpm --stream -r migrate status",
     "migrate:deploy": "pnpm --stream -r migrate deploy",
+    "prisma": "pnpm --stream -r prisma",
     "studio": "pnpm --stream -r studio",
     "test": "pnpm --stream -r test",
     "pnpm": "npm x --y pnpm",
