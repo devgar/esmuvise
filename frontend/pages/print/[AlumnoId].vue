@@ -12,7 +12,7 @@
                 <td>
                     <div style="display: flex;">
                         <h3 @click="copyCB" class="mgrow">{{ fullName }}</h3>
-                        <h5 class="mflex"><i></i><div class="mgrow"></div>{{ $evaluation.id.value }}ª Avaluació</h5>
+                        <h5 class="mflex">{{ $evaluation.id.value }}ª Avaluació</h5>
                     </div>
                     <Asignatura
                         v-for="matricula in matriculas" key="matricula.id"
@@ -53,18 +53,12 @@ const AlumnoId = computed(() => parseInt(route.params.AlumnoId))
 
 const alumno = computed(() => $alumnos.byId(AlumnoId.value))
 
-const fullName = computed(() => alumno.value && [alumno.value.firstName, alumno.value.lastName].join(" "))
+const fullName = computed(() => 
+    alumno.value && [alumno.value.firstName, alumno.value.lastName].join(" "))
 
 const matriculas = computed(() => $matriculas.byAlumnoId(AlumnoId.value))
 
-const icon = (value) => {
-    value |= 0
-    if (value < 500) return 'mdi-timer-sand'
-    if( value < 700) return 'mdi-check-bold'
-    return 'mdi-star'
-}
-
-function copyCB(event) {
+function copyCB() {
     navigator.clipboard.writeText(fullName.value)
 }
 </script>
