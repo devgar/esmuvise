@@ -59,7 +59,7 @@ const route = useRoute();
 const loaded = ref(false)
 useMetaStore().fetch()
     .then(() =>  loaded.value = true)
-    .catch((err) => globalError.value = err)
+    .catch((err: any) => globalError.value = err)
 
 </script>
 
