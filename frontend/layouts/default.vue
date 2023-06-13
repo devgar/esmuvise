@@ -1,19 +1,20 @@
 <template>
     <v-app v-if="loaded" vfull-height>
         <v-app-bar class="no-print">
-            <v-container class="fill-height d-flex align-center">
                 <v-avatar
                     class="me-10 ms-4"
                     color="grey-darken-1"
                     size="32"
                     image="/escola.256.jpg"    
                 />
-                <v-btn to="/alumnos" variant="text">Alumnos</v-btn>
-                <v-btn to="/asignaturas" variant="text">Asignaturas</v-btn>
+                <v-btn to="/students" variant="text">Alumnos</v-btn>
+                <!-- <v-btn to="/asignaturas" variant="text">Asignaturas</v-btn> -->
                 <v-spacer />
+                
+            <template v-slot:append>
                 <v-btn icon="mdi-magnify" />
                 <UserMenu />
-            </v-container>
+            </template>
         </v-app-bar>
         
         <v-navigation-drawer v-if="loaded" class="no-print">
@@ -24,7 +25,7 @@
                 </VCardActions>
             </VCard>
 
-            <VList v-if="route.name === 'alumnos'">
+            <VList v-if="route.name === 'students'">
                 <VListItem>
                     <VListItemAction>
                         <NewAlumno />

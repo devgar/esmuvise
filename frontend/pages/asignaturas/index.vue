@@ -1,5 +1,5 @@
 <template>
-    <v-table class="h-auto" density="compact" fixed-header height="calc(100vh - 64px)" hover>
+    <v-table density="compact" hover>
         <thead>
             <tr>
                 <th class="text-center">Asignatura</th>
@@ -8,12 +8,12 @@
         </thead>
         <tbody>
             <tr v-for="item of usedAsignaturas" :key="item.id">
-                <td class="v-col-2">
+                <td>
                     <v-btn class="text-left" block :to="`/asignatura/${item.id}`" variant="text">
                         {{ item?.nameVLC }}
                     </v-btn>
                 </td>
-                <td class="v-col-auto">
+                <td>
                     {{ $matriculas.byAsignaturaId(item.id)?.length }} alumnos
                 </td>
             </tr>

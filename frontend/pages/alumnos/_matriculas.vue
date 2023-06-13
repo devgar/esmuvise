@@ -1,20 +1,21 @@
 <template>
-    <div v-if="asignaturas.length == 0">Sin matricular</div>
-    <div v-else class="asignaturas">
-        <v-btn v-for="{ id, Asignatura } in asignaturas" :key="id"
-            v-text="Asignatura?.nameVLC" router nuxt-link
-            :to="`/alumno/${props.alumnoId}/matriculas/${id}`"
+    <template v-if="asignaturas.length == 0">Sin matricular</template>
+    <template v-else class="asignaturas">
+        <v-btn v-for="{ id, nameVLC, curso } in asignaturas" :key="id"
+            v-text="`${nameVLC} · ${curso}`" router nuxt-link
+            :to="`/alumno/${alumnoId}/matriculas/${id}`"
             size="x-small" variant="outlined"
         />
-    </div>
+    </template>
 </template>
 
-<script setup>
-import { useMatriculaStore } from '~~/stores/matriculas'
-
-const props = defineProps({ alumnoId: Number })
+<script lang='ts' setup>
+const { alumnoId } = defineProps({ alumnoId: Number })
 const $matriculas = useMatriculaStore()
-const errorMsg = computed(() => props.alumnoId ? '' : 'Error')
-
-const asignaturas = computed(() => $matriculas.byAlumnoId(props.alumnoId))
+const $asignaturas = useAsignaturaStore()
+const asignaturas = computed(() => {
+    if (!alumnoId) return []
+    return $matriculas.byAlumnoId(alumnoId)
+        .map(({ id, AsignaturaId, curso }) => ({ id, AsignaturaId, curso, nameVLC: $asignaturas.byId(AsignaturaId)?.nameVLC}))
+})
 </script>
