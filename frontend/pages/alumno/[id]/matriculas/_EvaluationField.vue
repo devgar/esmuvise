@@ -69,10 +69,10 @@ const $rubricas = useRubricaStore()
 const rubrica = computed(() => $rubricas.rubricas.find(r => r.id === props.rubricaId))
 
 const options = [
-    { id: 'vFail', name: 'suspenso', value: 499 },
-    { id: 'vLow', name: 'aprobado', value: 699 },
-    { id: 'vMid', name: 'bien', value: 899 },
-    { id: 'vHigh', name: 'sobresaliente', value: 1000 },
+    { id: 'vFail', name: 'INSUFICIENT', value: 499 },
+    { id: 'vLow', name: 'BÉ', value: 699 },
+    { id: 'vMid', name: 'NOTABLE', value: 899 },
+    { id: 'vHigh', name: 'EXCEL·LENT', value: 1000 },
 ]
 
 const value = ref('')
@@ -110,9 +110,12 @@ watch(value, () => {
     selected.value = options.find(o => o.value >= mult)?.id
 })
 
-watch(selected, (_, old) => {
+watch(selected, (now, old) => {
+    console.log(`changed from ${old} to ${now}`)
+    if (!text.value) text.value = rubrica?.value[selected.value]
+    else 
     text.value = old ? rubrica?.value[selected.value]
-        : evaluationItem.value.body
+        : evaluationItem.value?.body
 })
 
 watch(evaluationItem, () => {
