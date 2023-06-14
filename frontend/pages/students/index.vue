@@ -10,7 +10,7 @@
         <tbody>
             <tr v-for="item of alumnos" :key="item.id">
                 <td><VBtn class="px-0" router nuxt-link 
-                    :to="`/alumno/${831}`" variant="text">
+                    :to="`/alumno/${item.id}`" variant="text">
                         {{ item.lastName }}, <b>{{ item.firstName }}</b>
                     </VBtn>
                 </td>
